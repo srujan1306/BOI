@@ -263,38 +263,105 @@ th:first-child {
 .frame_5_heading {
   color: #291550;
   font-family: "Inter", sans-serif;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .frame_5_images_set {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
 }
-.frame_5_image_1_5 {
-  height: 375px;
-  width: 220px;
-  background: black;
+.frame_5_image_1 {
+  background-image: url("../../assets/image_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 300px;
+  width: 180px;
   margin: 5px;
 }
 .frame_5_image_3 {
+  background-image: url("../../assets/image_3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
   height: 175px;
   width: 300px;
-  background: black;
   margin: 5px;
 }
 
-.frame_5_image_2_4 {
-  height: 300px;
-  width: 180px;
-  background: black;
+.frame_5_image_2 {
+  height: 235px;
+  width: 150px;
+  background: #97ef29;
   margin: 5px;
 }
+.frame_5_image_4 {
+  height: 235px;
+  width: 150px;
+  background: #6833cc;
+  margin: 5px;
+}
+.frame_5_image_5 {
+  background-image: url("../../assets/image_5.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 300px;
+  width: 180px;
+  margin: 5px;
+}
+.iso_standards {
+  display: flex;
+  flex-direction: row;
+}
+.iso_info {
+  width: 280px;
+  p {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+  }
+}
+.iso_1_image {
+  background-image: url("../../assets/iso_1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+}
+.iso_containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.iso_2_image {
+  background-image: url("../../assets/iso_2.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+}
+
 //------------------------------------------------
 .frame_6 {
   background-image: url("../../assets/background_6.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  font-family: "Inter", sans-serif;
   height: 130vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.frame_6_heading {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  color: white;
+  h2 {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+.heading_description {
+  color: #c9c9c9;
 }

@@ -1,0 +1,88 @@
+.container {
+  background: #291550;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 3px solid rgba(116, 110, 235, 0.2);
+}
+th {
+  font-weight: 600;
+}
+
+.plan {
+  text-align: center;
+  padding: 10px 20px;
+  background: #746beb;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.plan-features {
+  padding: 10px 0;
+}
+
+.plan-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-features li {
+  margin-bottom: 5px;
+}
+
+.check-mark {
+  display: inline-block;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #28a745;
+  margin-right: 10px;
+}
+.features {
+  text-align: left;
+}
+.features_heading {
+  height: 30px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.choose-button {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto;
+}
