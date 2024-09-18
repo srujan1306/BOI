@@ -1,4 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   margin: 0;
+  font-family: "Inter", sans-serif;
+}
+@font-face {
+  font-family: "Neurial Grotesk"; /* Replace with your font's name */
+  src: url("./assets/fonts/NeurialGrotesk-Regular.otf") format("otf"),
+    url("./assets/fonts/NeurialGrotesk-Bold.otf") format("otf"),
+    url("./assets/fonts/NeurialGrotesk-Extrabold.otf") format("otf"); /* Add other formats as necessary */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Neurial Grotesk"; /* Replace with your font's name */
+  src: url("./assets/fonts/NeurialGrotesk-Regular.otf") format("otf"),
+    url("./assets/fonts/NeurialGrotesk-Bold.otf") format("otf"),
+    url("./assets/fonts/NeurialGrotesk-Extrabold.otf") format("otf"); /* Add other formats as necessary */
+  font-weight: 700;
+  font-style: normal;
 }
