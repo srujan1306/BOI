@@ -25,7 +25,6 @@
     letter-spacing: 2%;
   }
 }
-
 .form-container {
   padding: 40px;
   border: 2px solid #4b2e99;
@@ -37,29 +36,47 @@
   align-items: center;
   justify-content: center;
 }
+
 .form-field {
   background-color: transparent;
-  border: none;
-  border: 2px solid #706fd3;
+  border: 2px solid #4b2e99;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 34px;
   width: 100%;
   padding: 10px;
   color: #ffffff;
 }
+
 .form-field::placeholder {
   color: #e5e5e5;
   opacity: 1;
 }
+
 .form-select {
   background-color: transparent;
-  border: none;
-  border-bottom: 2px solid #706fd3;
-  margin-bottom: 20px;
+  border: 2px solid #4b2e99;
+  border-radius: 10px;
+  margin-bottom: 34px;
   width: 100%;
   padding: 10px;
   color: #f5f6fa;
 }
+
+.input-group {
+  display: flex; /* Use flexbox for side-by-side layout */
+  width: 107%; /* Full width of the form */
+}
+
+.input-group .form-field,
+.input-group .form-select {
+  flex: 1; /* Allow inputs to grow equally */
+  margin-right: 10px; /* Space between fields */
+}
+
+.input-group .form-select {
+  margin-right: 0; /* Remove margin on the last element */
+}
+
 button {
   background: #99cc01;
   border: none;

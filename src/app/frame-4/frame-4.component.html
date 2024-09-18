@@ -16,14 +16,16 @@
   </div>
   <div class="form-container">
     <input type="text" placeholder="Full Name" class="form-field" />
-    <input type="text" class="form-field" placeholder="Phone" />
+    <div class="input-group">
+      <input type="text" class="form-field" placeholder="Phone" />
+      <select class="form-select">
+        <option value="" disabled selected>State</option>
+        <option value="state1">State 1</option>
+        <option value="state2">State 2</option>
+        <option value="state3">State 3</option>
+      </select>
+    </div>
     <input type="email" class="form-field" placeholder="Email" />
-    <select class="form-select">
-      <option value="" disabled selected>State</option>
-      <option value="state1">State 1</option>
-      <option value="state2">State 2</option>
-      <option value="state3">State 3</option>
-    </select>
     <input type="text" class="form-field" placeholder="Company" />
     <button>Book a Call</button>
     <div class="tagline">Save 40% on pocket and 100% on stress.</div>
