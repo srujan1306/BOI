@@ -65,3 +65,7 @@ td:first-child,
 th:first-child {
   width: 130px; /* Adjust the width as needed */
 }
+tbody tr:hover {
+  cursor: pointer;
+  color: #6833cc; /* Change to your desired color */
+}
