@@ -14,11 +14,7 @@
       <li>your BOI management needs.</li>
     </ul>
   </div>
-  <form
-    [formGroup]="CustomerForm"
-    (ngSubmit)="newCustomer()"
-    class="add-movie-form"
-  >
+  <form [formGroup]="CustomerForm" (ngSubmit)="newCustomer()">
     <div class="form-container">
       <div class="input_name_group">
         <div class="name_field">
@@ -109,4 +105,12 @@
       <div class="tagline">Save 40% on pocket and 100% on stress.</div>
     </div>
   </form>
+  @if(isModalVisible){
+  <div class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <p>Your details have been submitted successfully!</p>
+    </div>
+  </div>
+  }
 </section>

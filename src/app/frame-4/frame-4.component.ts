@@ -18,6 +18,8 @@ import { newCustomer } from '../app.component';
 export class Frame4Component {
   usaStates: string[] = [];
   phoneTouched = false;
+  isModalVisible = false;
+
   CustomerForm: FormGroup;
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
@@ -44,6 +46,7 @@ export class Frame4Component {
       try {
         await this.CustomerdetailsService.newCustomer_details(newCustomer);
         console.log('Customer details sent to service successfully');
+        this.showModal();
       } catch (error) {
         console.error('Error sending customer details:', error);
         // Optionally show an error message to the user
@@ -87,5 +90,12 @@ export class Frame4Component {
       .catch((error) => {
         console.error('There was a problem with the fetch operation:', error);
       });
+  }
+  showModal() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
   }
 }
