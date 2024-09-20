@@ -16,6 +16,7 @@ import { newCustomer } from '../app.component';
   styleUrl: './frame-4.component.scss',
 })
 export class Frame4Component {
+  phoneTouched = false;
   CustomerForm: FormGroup;
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
@@ -43,5 +44,14 @@ export class Frame4Component {
         console.log('customer details sent to service successfully');
       });
     }
+  }
+  get fullname() {
+    return this.CustomerForm.get('fullname');
+  }
+  get phone_number() {
+    return this.CustomerForm.get('phone_number');
+  }
+  get email() {
+    return this.CustomerForm.get('email');
   }
 }

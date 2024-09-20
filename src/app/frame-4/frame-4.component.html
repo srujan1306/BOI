@@ -3,7 +3,7 @@
     <h1 class="frame_4_heading">Flexible for You.</h1>
     <div class="frame_4_description">
       <p>
-        The team of experts that simplifies BOI reporting and meet your
+        The team of experts that simplifies BOI reporting and meets your
         requirements as per your filing needs.
       </p>
     </div>
@@ -20,38 +20,91 @@
     class="add-movie-form"
   >
     <div class="form-container">
-      <input
-        type="text"
-        placeholder="Full Name"
-        formControlName="fullname"
-        class="form-field"
-      />
-      <div class="input-group">
-        <input
-          type="text"
-          class="form-field"
-          placeholder="Phone"
-          formControlName="phone_number"
-        />
-        <select class="form-select" formControlName="state">
-          <option value="" disabled selected>State</option>
-          <option value="state1">State 1</option>
-          <option value="state2">State 2</option>
-          <option value="state3">State 3</option>
-        </select>
+      <div class="input_name_group">
+        <div class="name_field">
+          <input
+            type="text"
+            placeholder="Full Name"
+            formControlName="fullname"
+            class="form-field"
+          />
+        </div>
+        <div class="name_validation_container">
+          @if (fullname?.touched) { @if (fullname?.hasError('required')) {
+          <div class="custom-error">Name is <strong>required</strong>.</div>
+          } @if (fullname?.hasError('minlength')) {
+          <div class="custom-error">
+            Full Name is <strong>very short</strong>.
+          </div>
+          } }
+        </div>
       </div>
-      <input
-        type="email"
-        class="form-field"
-        placeholder="Email"
-        formControlName="email"
-      />
-      <input
-        type="text"
-        class="form-field"
-        placeholder="Company"
-        formControlName="company"
-      />
+
+      <div class="input_phone_and_state">
+        <div class="input_phone_group">
+          <div class="phone_field">
+            <input
+              type="text"
+              class="form_phone_field"
+              placeholder="Phone"
+              formControlName="phone_number"
+              (focus)="phoneTouched = true"
+            />
+          </div>
+          <div class="name_validation_container">
+            @if (phoneTouched && phone_number?.hasError('required')) {
+            <div class="custom-error">
+              Phone number is <strong>required</strong>.
+            </div>
+            } @if (phoneTouched && phone_number?.hasError('pattern')) {
+            <div class="custom-error">
+              Phone number is <strong>invalid</strong>.
+            </div>
+            }
+          </div>
+        </div>
+
+        <div class="input_state_group">
+          <div class="state_field">
+            <select class="form-select" formControlName="state">
+              <option value="" disabled selected>State</option>
+              <option value="state1">State 1</option>
+              <option value="state2">State 2</option>
+              <option value="state3">State 3</option>
+            </select>
+          </div>
+          <div class="name_validation_container"></div>
+        </div>
+      </div>
+
+      <div class="input_email_group">
+        <div class="email_field">
+          <input
+            type="email"
+            class="form-field"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </div>
+        <div class="name_validation_container">
+          @if (email?.touched && email?.hasError('email')) {
+          <div class="custom-error">Please enter a valid email address.</div>
+          }
+        </div>
+      </div>
+
+      <div class="input_company_group">
+        <div class="company_field">
+          <input
+            type="text"
+            class="form-field"
+            placeholder="Company"
+            formControlName="company"
+          />
+        </div>
+        <div class="name_validation_container"></div>
+      </div>
+
       <button type="submit">Book a Call</button>
       <div class="tagline">Save 40% on pocket and 100% on stress.</div>
     </div>

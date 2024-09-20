@@ -36,18 +36,33 @@
   align-items: center;
   justify-content: center;
 }
+.name_validation_container {
+  height: 34px;
+  width: 184px;
+}
 
 .form-field {
   background-color: transparent;
   border: 2px solid #4b2e99;
   border-radius: 10px;
-  margin-bottom: 34px;
-  width: 100%;
+
+  width: 94%;
+  padding: 10px;
+  color: #ffffff;
+}
+.form_phone_field {
+  background-color: transparent;
+  border: 2px solid #4b2e99;
+  border-radius: 10px;
+  width: 94%;
   padding: 10px;
   color: #ffffff;
 }
 
-.form-field::placeholder {
+.form-field,
+::placeholder,
+.form_phone_field,
+::placeholder {
   color: #e5e5e5;
   opacity: 1;
 }
@@ -56,15 +71,43 @@
   background-color: transparent;
   border: 2px solid #4b2e99;
   border-radius: 10px;
-  margin-bottom: 34px;
+
   width: 100%;
   padding: 10px;
   color: #f5f6fa;
 }
 
-.input-group {
-  display: flex; /* Use flexbox for side-by-side layout */
-  width: 107%; /* Full width of the form */
+.input_name_group {
+  display: flex;
+  flex-direction: column;
+  width: 107%;
+}
+.input_phone_and_state {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.input_phone_group {
+  display: flex;
+  flex-direction: column;
+}
+.phone_field {
+  width: 175px;
+}
+.input_state_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_email_group {
+  display: flex;
+  flex-direction: column;
+  width: 107%;
+}
+.input_company_group {
+  display: flex;
+  flex-direction: column;
+  width: 107%;
 }
 
 .input-group .form-field,
@@ -92,4 +135,10 @@ button {
   text-align: center;
   font-size: 14px;
   color: #dcdde1;
+}
+
+.custom-error {
+  color: #f44336; /* Red color for error messages */
+  font-size: 0.7em; /* Smaller font size */
+  margin-top: 4px; /* Space above the error message */
 }
