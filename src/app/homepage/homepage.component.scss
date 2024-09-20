@@ -1,19 +1,23 @@
 //--------------------------------------------------------------
 .animation_2 {
-  position: absolute;
-  top: 626px;
-  width: 305px;
-  height: 170px;
-  padding: 10px 0px;
+  // height: 190px;
+  border: 0.5rem solid black; /* Set the border color to black */
+
   background: rgb(0, 0, 0);
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+  margin: auto; /* Center the container */
+  overflow: hidden; /* Hide overflow if necessary */
+  position: relative; /* For positioning children if needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 340px;
 }
 .news_updates {
   color: white;
   background-color: black;
   height: 55px;
-  padding-left: 306px;
   display: flex;
   align-items: center;
   p {
@@ -21,9 +25,34 @@
     padding-left: 8px;
   }
 }
-footer {
+.component_wrapper {
+  position: relative; /* Set position relative for absolute positioning of the child */
+}
+.fixed_layer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute; /* Position it absolutely */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the div */
+  z-index: 10; /* Ensure it is on top of other content */
+  align-items: center;
+  justify-content: center;
+}
+.footer {
   text-align: center;
   padding: 2px;
   background-color: #000000;
   color: #fff;
+}
+.component {
+  margin: 20px 0; /* Add vertical spacing between components */
+}
+
+.animation_3 {
+  margin: 20px 0; /* Add margin to separate from surrounding content */
+}
+
+.footer {
+  margin-top: 40px; /* Add space above footer */
 }

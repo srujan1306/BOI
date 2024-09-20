@@ -82,7 +82,10 @@ th:first-child {
 
 tbody tr:hover {
   cursor: pointer;
-  color: #6833cc; /* Change to your desired color */
+  color: #6833cc;
+  .row_headings {
+    color: #6833cc;
+  }
 }
 
 /* Responsive Design */
