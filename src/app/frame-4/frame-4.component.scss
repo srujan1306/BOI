@@ -71,10 +71,13 @@
   background-color: transparent;
   border: 2px solid #4b2e99;
   border-radius: 10px;
-
   width: 100%;
   padding: 10px;
-  color: #f5f6fa;
+  color: #ffffff; /* Default text color */
+  cursor: pointer;
+}
+.form-select option {
+  color: #000000;
 }
 
 .input_name_group {

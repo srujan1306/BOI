@@ -1,26 +1,61 @@
 .frame_1 {
   background-image: url("../../assets/background_1.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover; /* Maintain aspect ratio */
   margin: 0;
   height: 100vh;
   padding: 0;
-  // padding: 200px 20px;
 }
+
 .main_title {
   height: 100vh;
-  // width: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow */
+  padding: 20px; /* Added padding for smaller screens */
 }
+
 .title_description {
   width: 450px;
   text-align: center;
 }
+
 .animation_1 {
   width: 600px;
   height: 300px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .title_description {
+    width: 70%; /* Adjust width for medium screens */
+  }
+
+  .animation_1 {
+    width: 90%; /* Make animation responsive */
+  }
+}
+
+@media (max-width: 768px) {
+  .title_description {
+    width: 90%; /* Full width on small screens */
+  }
+
+  .animation_1 {
+    width: 100%; /* Full width for animation */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .main_title {
+    padding: 10px; /* Less padding on very small screens */
+  }
+
+  .title_description {
+    font-size: 14px; /* Smaller font size for readability */
+  }
 }

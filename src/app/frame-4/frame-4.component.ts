@@ -16,6 +16,7 @@ import { newCustomer } from '../app.component';
   styleUrl: './frame-4.component.scss',
 })
 export class Frame4Component {
+  usaStates: string[] = [];
   phoneTouched = false;
   CustomerForm: FormGroup;
   constructor(
@@ -32,7 +33,7 @@ export class Frame4Component {
       company: '',
     });
   }
-  newCustomer() {
+  async newCustomer() {
     if (this.CustomerForm.valid) {
       let newCustomer: newCustomer = {
         ...this.CustomerForm.value,
@@ -40,11 +41,16 @@ export class Frame4Component {
       };
       console.log(newCustomer);
 
-      this.CustomerdetailsService.newCustomer_details(newCustomer).then(() => {
-        console.log('customer details sent to service successfully');
-      });
+      try {
+        await this.CustomerdetailsService.newCustomer_details(newCustomer);
+        console.log('Customer details sent to service successfully');
+      } catch (error) {
+        console.error('Error sending customer details:', error);
+        // Optionally show an error message to the user
+      }
     }
   }
+
   get fullname() {
     return this.CustomerForm.get('fullname');
   }
@@ -53,5 +59,33 @@ export class Frame4Component {
   }
   get email() {
     return this.CustomerForm.get('email');
+  }
+  ngOnInit(): void {
+    this.loadCountries();
+  }
+
+  loadCountries(): void {
+    fetch('country-state-city.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const usa = data.Countries.find(
+          (country: { CountryName: string }) =>
+            country.CountryName === 'United States'
+        );
+
+        if (usa) {
+          this.usaStates = usa.States.map(
+            (state: { StateName: any }) => state.StateName
+          );
+        }
+      })
+      .catch((error) => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
   }
 }
