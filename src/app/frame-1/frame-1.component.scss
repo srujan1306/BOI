@@ -5,6 +5,10 @@
   margin: 0;
   height: 100vh;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main_title {
@@ -15,17 +19,18 @@
   justify-content: center;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow */
-  padding: 20px; /* Added padding for smaller screens */
+  padding: 2rem; /* Added padding for smaller screens */
 }
 
 .title_description {
-  width: 450px;
+  max-width: 450px;
+  width: 90%; // Responsive width
   text-align: center;
 }
 
 .animation_1 {
-  width: 600px;
-  height: 300px;
+  max-width: 100%; // Full width for responsiveness
+  height: auto; // Maintain aspect ratio
 }
 
 /* Media queries for responsiveness */
