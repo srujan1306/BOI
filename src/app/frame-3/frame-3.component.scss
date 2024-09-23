@@ -3,10 +3,9 @@
   background-repeat: no-repeat;
   background-size: cover; /* Changed to cover for better responsiveness */
   height: auto; /* Change to auto for responsiveness */
-  min-height: 130vh; /* Minimum height */
+  min-height: 125vh; /* Minimum height */
   display: flex;
   flex-direction: column;
-  padding-bottom: 20px; /* Add padding to prevent overflow */
 }
 .heading {
   font-family: Inter;
@@ -167,5 +166,12 @@
 
   .book_call_container {
     margin: 10px; /* Reduce margin */
+  }
+  .right_column_boxes {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
