@@ -108,7 +108,6 @@
 }
 .book_call_container {
   margin: 28px;
-  cursor: pointer;
   button {
     background: #99cc01;
     border: none;
@@ -117,6 +116,7 @@
     border-radius: 12px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
+    cursor: pointer;
   }
   p {
     width: 124px;
@@ -139,7 +139,7 @@
   }
 
   .right_column_boxes {
-    margin-top: 20px; /* Adjust margin */
+    margin-top: 0px; /* Adjust margin */
   }
 
   .animation_3,

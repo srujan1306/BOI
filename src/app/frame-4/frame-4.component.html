@@ -25,7 +25,7 @@
             class="form-field"
           />
         </div>
-        <div class="name_validation_container">
+        <div class="validation_container">
           @if (fullname?.touched) { @if (fullname?.hasError('required')) {
           <div class="custom-error">Name is <strong>required</strong>.</div>
           } @if (fullname?.hasError('minlength')) {
@@ -47,7 +47,7 @@
               (focus)="phoneTouched = true"
             />
           </div>
-          <div class="name_validation_container">
+          <div class="validation_container">
             @if (phoneTouched && phone_number?.hasError('required')) {
             <div class="custom-error">
               Phone number is <strong>required</strong>.
@@ -69,7 +69,7 @@
               }
             </select>
           </div>
-          <div class="name_validation_container"></div>
+          <div class="validation_container"></div>
         </div>
       </div>
 
@@ -82,7 +82,7 @@
             formControlName="email"
           />
         </div>
-        <div class="name_validation_container">
+        <div class="validation_container">
           @if (email?.touched && email?.hasError('email')) {
           <div class="custom-error">Please enter a valid email address.</div>
           }
@@ -98,7 +98,7 @@
             formControlName="company"
           />
         </div>
-        <div class="name_validation_container"></div>
+        <div class="validation_container"></div>
       </div>
 
       <button [disabled]="isLoading">
