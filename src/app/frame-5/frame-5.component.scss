@@ -112,3 +112,121 @@
   width: 100px;
   margin: 5px;
 }
+
+//-----------------------------------------------------------------
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .frame_5 {
+    padding: 20px; /* Add padding for smaller screens */
+    overflow: hidden; /* Prevent overflow */
+    background-size: cover; /* Maintain aspect ratio */
+    background-position: center; /* Center the background */
+  }
+
+  .frame_5_images_set {
+    flex-direction: column; /* Stack images vertically */
+    align-items: center; /* Center align items */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .frame_5_image_1,
+  .frame_5_image_3,
+  .frame_5_image_5 {
+    width: 90%; /* Make images responsive */
+    max-width: 300px; /* Limit maximum width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .frame_5_image_2,
+  .frame_5_image_4 {
+    width: 80%; /* Adjust width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .counts {
+    width: auto; /* Make counts responsive */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .iso_standards {
+    flex-direction: column; /* Stack ISO standards vertically */
+    align-items: center; /* Center align items */
+    width: 100%; /* Ensure full width */
+  }
+
+  .iso_info {
+    width: 90%; /* Make iso info responsive */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Prevent overflow */
+  }
+}
+
+@media (max-width: 768px) {
+  .frame_5 {
+    background-size: cover; /* Maintain aspect ratio */
+    background-position: center; /* Center the background */
+  }
+
+  .frame_5_heading {
+    font-size: 20px; /* Smaller heading font size */
+  }
+
+  .frame_5_images_set {
+    flex-direction: column; /* Stack images vertically */
+    width: 100%; /* Ensure it takes full width */
+  }
+
+  .frame_5_image_1,
+  .frame_5_image_3,
+  .frame_5_image_5 {
+    height: 200px; /* Adjust height */
+    width: 100%; /* Full width */
+  }
+
+  .frame_5_image_2,
+  .frame_5_image_4 {
+    height: 180px; /* Adjust height */
+    width: 90%; /* Responsive width */
+  }
+
+  .iso_info {
+    width: 100%; /* Ensure it takes full width */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Prevent overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .frame_5 {
+    background-size: cover; /* Maintain aspect ratio */
+    background-position: center; /* Center the background */
+    height: auto;
+  }
+
+  .frame_5_heading {
+    font-size: 18px; /* Smaller heading font size */
+  }
+
+  .frame_5_image_1,
+  .frame_5_image_3,
+  .frame_5_image_5,
+  .frame_5_image_2,
+  .frame_5_image_4 {
+    width: 100%;
+    height: 130px;
+    max-width: none;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+  }
+
+  .iso_info p {
+    font-size: 12px; /* Smaller font size for iso info */
+  }
+  .iso_containers {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
