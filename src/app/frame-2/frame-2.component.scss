@@ -52,19 +52,19 @@
 .image_container {
   background-image: url("../../assets/customer_support_image.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover; /* Use cover for better aspect ratio */
   height: 450px;
   width: 100%;
   max-width: 420px;
   border-radius: 35px;
   display: flex;
   align-items: flex-start; /* Align text to the bottom */
+  padding: 20px; /* Add padding for text */
 }
 
 .image_container p {
   color: white;
   font-size: 18px;
-  padding-left: 28px;
 }
 
 td {
@@ -89,6 +89,13 @@ tbody tr:hover {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 26px; /* Smaller for tablets */
+    line-height: 45px; /* Adjust line height */
+  }
+}
+
 @media (max-width: 768px) {
   .frame_2 {
     padding: 10px; /* Reduce padding for smaller screens */
@@ -101,6 +108,7 @@ tbody tr:hover {
 
   .main_container {
     flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align for better appearance */
   }
 
   .table_container {
@@ -110,14 +118,13 @@ tbody tr:hover {
   }
 
   .image_container {
-    width: 100%; /* Full width */
-    height: 250px; /* Adjust height for smaller screens */
+    width: 55%;
+    height: 398px;
     border-radius: 15px; /* Slightly less rounding */
-    padding: 15px; /* Padding for text */
   }
 
   .image_container p {
-    font-size: 18px; /* Slightly smaller font size */
+    font-size: 16px; /* Smaller font size */
   }
 
   .row_headings {
@@ -126,5 +133,29 @@ tbody tr:hover {
 
   td {
     padding: 20px; /* Reduced padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 22px; /* Even smaller for very small screens */
+    line-height: 35px; /* Adjust line height */
+  }
+  .image_container {
+    width: 75%; /* Full width */
+    height: 315px; /* Adjust height for smaller screens */
+    border-radius: 15px; /* Slightly less rounding */
+  }
+  .image_container p {
+    font-size: 14px; /* Adjust font size for mobile */
+    width: 275px;
+  }
+
+  .row_headings {
+    font-size: 14px; /* Smaller headings for very small screens */
+  }
+
+  td {
+    padding: 15px; /* Further reduce padding */
   }
 }

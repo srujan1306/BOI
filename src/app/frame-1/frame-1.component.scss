@@ -58,6 +58,9 @@
 @media (max-width: 480px) {
   .main_title {
     padding: 10px; /* Less padding on very small screens */
+    h1 {
+      text-align: center;
+    }
   }
 
   .title_description {
