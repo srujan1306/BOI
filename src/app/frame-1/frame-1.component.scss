@@ -45,6 +45,12 @@
 }
 
 @media (max-width: 768px) {
+  .main_title {
+    padding: 10px; /* Less padding on very small screens */
+    h1 {
+      text-align: center;
+    }
+  }
   .title_description {
     width: 90%; /* Full width on small screens */
   }

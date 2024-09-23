@@ -1,7 +1,7 @@
 .frame_6 {
   background-image: url("../../assets/background_6.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover; /* Use cover to maintain aspect ratio */
   font-family: "Inter", sans-serif;
   height: 200vh;
   display: flex;
@@ -9,33 +9,41 @@
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 20px; /* Add padding for smaller screens */
 }
+
 .frame_6_service_offers {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .frame_6_heading {
-  font-family: "Inter", sans-serif;
   font-size: 24px;
   color: white;
+  text-align: center; /* Center-align text */
+
   h2 {
     margin: 0;
     margin-top: 36px;
   }
 }
+
 .heading_description {
   color: #c9c9c9;
+  text-align: center; /* Center-align text */
 }
+
 .footer_company_details {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
+
 .procstat {
   background-image: url("../../assets/procstat.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain; /* Use contain for better scaling */
   height: 55px;
   width: 250px;
   position: absolute;
@@ -43,10 +51,11 @@
   left: 220px;
   z-index: 1;
 }
+
 .footer_title {
   background-image: url("../../assets/Infinite\ Possibilities.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain; /* Use contain for better scaling */
   height: 210px;
   width: 650px;
   font-size: 12px;
@@ -63,14 +72,74 @@
 .bottom_image {
   background-image: url("../../assets/procstat_footer.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: contain; /* Use contain for better scaling */
   height: 500px;
   width: 725px;
   position: absolute;
   bottom: 85px; /* Adjust vertical position */
   right: 140px;
 }
+
 .proc {
   display: flex;
   flex-direction: row;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .frame_6 {
+    height: auto; /* Allow height to adjust */
+    padding: 10px; /* Reduce padding for tablets */
+  }
+
+  .footer_title,
+  .procstat,
+  .bottom_image {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Allow height to adjust */
+    position: relative; /* Change to relative positioning */
+    margin: 0 auto; /* Center elements */
+    left: 0; /* Reset left position */
+  }
+}
+
+@media (max-width: 768px) {
+  .frame_6_heading {
+    font-size: 20px; /* Slightly smaller font size */
+  }
+
+  .footer_title {
+    font-size: 10px; /* Smaller font size for footer */
+  }
+
+  .procstat {
+    width: 80%; /* Adjust width */
+  }
+
+  .bottom_image {
+    width: 90%; /* Adjust width */
+    height: 300px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .frame_6_heading {
+    font-size: 18px; /* Further reduce font size */
+  }
+
+  .footer_title {
+    font-size: 8px; /* Even smaller for very small screens */
+  }
+
+  .procstat {
+    height: 40px; /* Adjust height */
+  }
+
+  .bottom_image {
+    height: 250px; /* Adjust height */
+  }
+
+  .heading_description {
+    font-size: 14px; /* Smaller font size */
+  }
 }

@@ -290,18 +290,20 @@ body.modal-open {
 
   .frame_4_description {
     width: auto; /* Allow width to be dynamic */
+    p {
+      text-align: center;
+    }
   }
 
   .form-container {
-    width: 90%; /* Make the form responsive */
+    width: 20rem; /* Make the form responsive */
     height: auto; /* Allow height to adjust */
     padding: 20px; /* Adjust padding */
   }
 
   .form-field,
-  .form_phone_field,
-  .form-select {
-    width: 100%; /* Full width for inputs */
+  .form_phone_field {
+    width: 92%; /* Full width for inputs */
   }
 
   .input_name_group,
@@ -312,6 +314,11 @@ body.modal-open {
 
   .input_phone_and_state {
     flex-direction: column; /* Stack phone and state inputs */
+    gap: 0px;
+    width: 100%;
+  }
+  .form-select {
+    width: 99%;
   }
 
   .phone_field {

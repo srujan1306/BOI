@@ -28,7 +28,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
   padding-bottom: 35px;
 }
 
@@ -143,7 +142,7 @@ tbody tr:hover {
   }
   .image_container {
     width: 75%; /* Full width */
-    height: 315px; /* Adjust height for smaller screens */
+    height: 330px; /* Adjust height for smaller screens */
     border-radius: 15px; /* Slightly less rounding */
   }
   .image_container p {
