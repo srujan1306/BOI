@@ -319,7 +319,7 @@ body.modal-open {
   }
 
   button {
-    width: 100%; /* Full width for button */
+    width: 50%; /* Full width for button */
   }
 
   .tagline {
@@ -329,6 +329,9 @@ body.modal-open {
 
 /* Additional styles for very small screens */
 @media (max-width: 480px) {
+  .frame_4 {
+    padding-bottom: 2.5rem;
+  }
   .frame_4_heading {
     font-size: 46px; /* Smaller heading font size */
   }
@@ -343,14 +346,28 @@ body.modal-open {
   .frame_4_description {
     width: 90%; /* Further reduce description width */
     text-align: justify;
+    p {
+      text-align: center;
+    }
   }
 
   .form-container {
     padding: 10px; /* Reduce padding */
+    width: 300px;
   }
-
+  .input_phone_and_state {
+    gap: 0px;
+    width: 100%;
+  }
+  .form-field,
+  .form_phone_field {
+    width: 92%; /* Full width for inputs */
+  }
+  .form-select {
+    width: 100%;
+  }
   button {
-    height: 30px; /* Adjust button height */
+    height: 38px; /* Adjust button height */
     font-size: 14px; /* Adjust button font size */
   }
 
