@@ -124,15 +124,66 @@
   margin-right: 0; /* Remove margin on the last element */
 }
 
+// button {
+//   background: #99cc01;
+//   border: none;
+//   width: 124px;
+//   height: 34px;
+//   border-radius: 12px;
+//   font-family: "Inter", sans-serif;
+//   font-weight: 600;
+// }
+//-----------
 button {
   background: #99cc01;
   border: none;
-  width: 124px;
-  height: 34px;
+  width: 110px; /* Adjust as needed */
+  height: 36px;
   border-radius: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  cursor: pointer;
 }
+
+/* Hover effect */
+button:hover {
+  background: #88b600; /* Darken background on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Active (click) effect */
+button:active {
+  transform: scale(0.95); /* Slightly shrink the button when clicked */
+  background: #77a800; /* Darker background on click */
+}
+
+/* Loader styles */
+.loader {
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Light border */
+  border-top: 3px solid #fff; /* White top */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: calc(50% - 10px); /* Center horizontally */
+  top: calc(50% - 10px); /* Center vertically */
+  animation: spin 1s linear infinite; /* Spin animation */
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+//--------------
 
 .tagline {
   margin-top: 20px;

@@ -101,7 +101,13 @@
         <div class="name_validation_container"></div>
       </div>
 
-      <button type="submit">Book a Call</button>
+      <button [disabled]="isLoading">
+        @if(!isLoading){
+        <span class="button-text">Book a Call</span>
+        } @if (isLoading) {
+        <span class="loader"></span>
+        }
+      </button>
       <div class="tagline">Save 40% on pocket and 100% on stress.</div>
     </div>
   </form>

@@ -19,6 +19,7 @@ export class Frame4Component {
   usaStates: string[] = [];
   phoneTouched = false;
   isModalVisible = false;
+  isLoading: boolean = false;
 
   CustomerForm: FormGroup;
   constructor(
@@ -36,6 +37,7 @@ export class Frame4Component {
     });
   }
   async newCustomer() {
+    this.isLoading = true;
     if (this.CustomerForm.valid) {
       let newCustomer: newCustomer = {
         ...this.CustomerForm.value,
@@ -52,6 +54,7 @@ export class Frame4Component {
         // Optionally show an error message to the user
       }
     }
+    this.isLoading = false;
   }
 
   get fullname() {
