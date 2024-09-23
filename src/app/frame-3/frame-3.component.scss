@@ -128,6 +128,31 @@
     margin-top: 8px;
   }
 }
+
+.button {
+  background: #99cc01;
+  border: none;
+  width: 110px; /* Adjust as needed */
+  height: 36px;
+  border-radius: 12px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #88b600; /* Darken background on hover */
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95); /* Slightly shrink the button when clicked */
+  background: #77a800; /* Even darker green when clicked */
+}
+
 @media (max-width: 768px) {
   .box {
     width: 90%; /* Take up more width on smaller screens */
