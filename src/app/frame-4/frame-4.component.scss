@@ -170,7 +170,7 @@ button:active {
   height: 20px;
   position: absolute;
   left: calc(50% - 10px); /* Center horizontally */
-  top: calc(50% - 10px); /* Center vertically */
+  top: calc(50% - 12px); /* Center vertically */
   animation: spin 1s linear infinite; /* Spin animation */
 }
 
