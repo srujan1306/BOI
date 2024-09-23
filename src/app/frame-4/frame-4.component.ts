@@ -96,9 +96,11 @@ export class Frame4Component {
   }
   showModal() {
     this.isModalVisible = true;
+    document.body.classList.add('modal-open');
   }
 
   closeModal() {
     this.isModalVisible = false;
+    document.body.classList.remove('modal-open');
   }
 }
