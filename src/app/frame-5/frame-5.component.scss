@@ -138,14 +138,17 @@
   .frame_5_image_3,
   .frame_5_image_5 {
     width: 90%; /* Make images responsive */
-    max-width: 300px; /* Limit maximum width */
-    height: auto; /* Allow height to adjust */
+    max-width: 640px; /* Limit maximum width */
+    height: 140px; /* Allow height to adjust */
+    background-position: center;
+    border-radius: 38px;
   }
 
   .frame_5_image_2,
   .frame_5_image_4 {
-    width: 80%; /* Adjust width */
-    height: auto; /* Allow height to adjust */
+    width: 68%; /* Adjust width */
+    height: 140px; /* Allow height to adjust */
+    border-radius: 38px;
   }
 
   .counts {
