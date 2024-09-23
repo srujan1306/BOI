@@ -188,7 +188,16 @@
   .left_box_container_3,
   .right_box_container_1,
   .right_box_container_2 {
-    padding-left: 16px; /* Adjust padding for smaller screens */
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 38px;
+
+    h2 {
+      width: 245px;
+      font-size: 16px;
+    }
   }
 
   .book_call_container {
