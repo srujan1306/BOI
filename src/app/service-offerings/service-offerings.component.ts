@@ -84,6 +84,7 @@ export class ServiceOfferingsComponent implements OnInit {
       }
     }
     this.isLoading = false;
+    this.showSuccess = false;
   }
 
   showModal() {
