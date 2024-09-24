@@ -53,15 +53,11 @@
 }
 
 .footer_title {
-  background-image: url("../../assets/Infinite\ Possibilities.png");
+  background-image: url("../../assets/Infinite_Possibilities.png");
   background-repeat: no-repeat;
   background-size: contain; /* Use contain for better scaling */
   height: 210px;
   width: 650px;
-  font-size: 12px;
-  color: white;
-  font-family: "Neurial Grotesk", sans-serif;
-  font-weight: 400;
   margin-bottom: 54px;
   position: absolute;
   bottom: 20px; /* Adjust vertical position */
@@ -146,15 +142,15 @@
     padding: 10px; /* Reduce padding for tablets */
   }
 
-  .footer_title,
-  .procstat,
-  .bottom_image {
-    width: 100%; /* Full width for smaller screens */
-    height: auto; /* Allow height to adjust */
-    position: relative; /* Change to relative positioning */
-    margin: 0 auto; /* Center elements */
-    left: 0; /* Reset left position */
-  }
+  // .footer_title,
+  // .procstat,
+  // .bottom_image {
+  //   width: 100%; /* Full width for smaller screens */
+  //   height: auto; /* Allow height to adjust */
+  //   position: relative; /* Change to relative positioning */
+  //   margin: 0 auto; /* Center elements */
+  //   left: 0; /* Reset left position */
+  // }
 }
 
 @media (max-width: 768px) {
@@ -177,20 +173,42 @@
 }
 
 @media (max-width: 480px) {
+  .frame_6 {
+    background-image: url("../../assets/background_6_mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px; /* Allow height to adjust */
+    padding: 10px; /* Reduce padding for tablets */
+  }
   .frame_6_heading {
     font-size: 18px; /* Further reduce font size */
   }
 
   .footer_title {
-    font-size: 8px; /* Even smaller for very small screens */
+    height: 110px;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 54px;
+    position: absolute;
+    bottom: 205px;
+    left: 42px;
+    z-index: 1;
   }
 
   .procstat {
-    height: 40px; /* Adjust height */
+    height: 40px;
+    position: absolute;
+    bottom: 380px; /* Adjust vertical position */
+    left: 42px;
+    z-index: 1;
   }
 
   .bottom_image {
-    height: 250px; /* Adjust height */
+    height: 400px;
+    width: 534px;
+    position: relative;
+    bottom: 0px;
+    right: 11px;
   }
 
   .heading_description {
