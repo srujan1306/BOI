@@ -139,13 +139,31 @@
       <tr>
         <td></td>
         <td>
-          <button class="choose-button"><p>Choose</p></button>
+          <button [disabled]="isLoading">
+            @if(!isLoading){
+            <span class="button-text">Choose</span>
+            } @if (isLoading) {
+            <span class="loader"></span>
+            }
+          </button>
         </td>
         <td>
-          <button class="choose-button"><p>Choose</p></button>
+          <button [disabled]="isLoading">
+            @if(!isLoading){
+            <span class="button-text">Choose</span>
+            } @if (isLoading) {
+            <span class="loader"></span>
+            }
+          </button>
         </td>
         <td>
-          <button class="choose-button"><p>Choose</p></button>
+          <button [disabled]="isLoading">
+            @if(!isLoading){
+            <span class="button-text">Choose</span>
+            } @if (isLoading) {
+            <span class="loader"></span>
+            }
+          </button>
         </td>
       </tr>
     </tbody>

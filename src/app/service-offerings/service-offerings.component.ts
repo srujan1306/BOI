@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './service-offerings.component.html',
-  styleUrl: './service-offerings.component.scss'
+  styleUrl: './service-offerings.component.scss',
 })
 export class ServiceOfferingsComponent {
-
+  isLoading: boolean = false;
 }
