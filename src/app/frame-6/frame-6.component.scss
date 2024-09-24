@@ -179,6 +179,7 @@
     background-size: cover;
     height: 900px; /* Allow height to adjust */
     padding: 10px; /* Reduce padding for tablets */
+    overflow: hidden;
   }
   .frame_6_heading {
     font-size: 18px; /* Further reduce font size */
