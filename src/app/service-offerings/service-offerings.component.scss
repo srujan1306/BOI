@@ -298,3 +298,10 @@ input:focus {
 .submit_button:disabled {
   background-color: #ccc;
 }
+.submission_success {
+  p {
+    margin: 0;
+    padding: 6px;
+    color: #000;
+  }
+}

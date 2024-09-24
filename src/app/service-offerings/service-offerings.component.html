@@ -140,29 +140,17 @@
         <td></td>
         <td>
           <button [disabled]="isLoading" (click)="prefill_package('gold')">
-            @if(!isLoading){
-            <span class="button-text">Choose</span>
-            } @if (isLoading) {
-            <span class="loader"></span>
-            }
+            Choose
           </button>
         </td>
         <td>
           <button [disabled]="isLoading" (click)="prefill_package('diamond')">
-            @if(!isLoading){
-            <span class="button-text">Choose</span>
-            } @if (isLoading) {
-            <span class="loader"></span>
-            }
+            Choose
           </button>
         </td>
         <td>
           <button [disabled]="isLoading" (click)="prefill_package('platinum')">
-            @if(!isLoading){
-            <span class="button-text">Choose</span>
-            } @if (isLoading) {
-            <span class="loader"></span>
-            }
+            Choose
           </button>
         </td>
       </tr>
@@ -214,20 +202,23 @@
           </div>
 
           <button
+            [disabled]="isLoading"
             class="submit_button"
             type="submit"
             [disabled]="newCustomerForm.invalid"
           >
-            Submit
+            @if(!isLoading){
+            <span class="button-text">Submit</span>
+            } @if (isLoading) {
+            <span class="loader"></span>
+            }
           </button>
+          @if(showSuccess) {
+          <div class="submission_success">
+            <p>Your details are submitted successfully!</p>
+          </div>
+          }
         </form>
-
-        <!-- <div class="ok_close_buttons">
-          <button class="button" (click)="closeModal()">OK</button>
-          <button class="button close_button" (click)="closeModal()">
-            Close
-          </button>
-        </div> -->
       </div>
     </div>
   </div>

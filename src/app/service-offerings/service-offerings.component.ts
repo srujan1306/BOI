@@ -21,6 +21,7 @@ export class ServiceOfferingsComponent implements OnInit {
   isModalVisible = false;
   isLoading: boolean = false;
   package: string = '';
+  showSuccess: boolean = false;
 
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
@@ -63,6 +64,7 @@ export class ServiceOfferingsComponent implements OnInit {
               customer_details
             );
           console.log('update_package done');
+          this.showSuccess = true;
         } else {
           const new_user =
             await this.CustomerdetailsService.newCustomer_details(
@@ -70,6 +72,7 @@ export class ServiceOfferingsComponent implements OnInit {
             );
           console.log('Customer details sent to service successfully');
           this.newCustomerForm.reset();
+          this.showSuccess = true;
         }
       } catch (error) {
         console.error('Error sending customer details:', error);
