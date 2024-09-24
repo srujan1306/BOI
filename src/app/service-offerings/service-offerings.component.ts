@@ -69,6 +69,7 @@ export class ServiceOfferingsComponent implements OnInit {
             );
           console.log('update_package done', updateUser);
           this.showSuccess = true;
+          this.newCustomerForm.reset();
         } else {
           const new_user =
             await this.CustomerdetailsService.newCustomer_details(
@@ -84,7 +85,6 @@ export class ServiceOfferingsComponent implements OnInit {
       }
     }
     this.isLoading = false;
-    this.showSuccess = false;
   }
 
   showModal() {
@@ -94,6 +94,8 @@ export class ServiceOfferingsComponent implements OnInit {
 
   closeModal() {
     this.isModalVisible = false;
+    this.showSuccess = false;
+
     document.body.classList.remove('modal-open');
   }
   prefill_package(pack: string) {
