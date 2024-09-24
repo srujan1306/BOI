@@ -21,4 +21,18 @@ export class CustomerdetailsService {
       },
     }).then((res) => res.json());
   }
+  updateCustomer_details(newCustomer: newCustomer) {
+    // Post
+    // 1. method
+    // 2. body - Data & JSON
+    // 3. Header - JSON
+    const userId = localStorage.getItem('id');
+    return fetch(`${API}/enquiry/details/${userId}`, {
+      method: 'PATCH',
+      body: JSON.stringify(newCustomer),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    }).then((res) => res.json());
+  }
 }

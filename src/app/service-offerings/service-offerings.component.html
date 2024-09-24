@@ -139,7 +139,7 @@
       <tr>
         <td></td>
         <td>
-          <button [disabled]="isLoading">
+          <button [disabled]="isLoading" (click)="prefill_package('gold')">
             @if(!isLoading){
             <span class="button-text">Choose</span>
             } @if (isLoading) {
@@ -148,7 +148,7 @@
           </button>
         </td>
         <td>
-          <button [disabled]="isLoading">
+          <button [disabled]="isLoading" (click)="prefill_package('diamond')">
             @if(!isLoading){
             <span class="button-text">Choose</span>
             } @if (isLoading) {
@@ -157,7 +157,7 @@
           </button>
         </td>
         <td>
-          <button [disabled]="isLoading">
+          <button [disabled]="isLoading" (click)="prefill_package('platinum')">
             @if(!isLoading){
             <span class="button-text">Choose</span>
             } @if (isLoading) {
@@ -168,4 +168,68 @@
       </tr>
     </tbody>
   </table>
+
+  @if(isModalVisible){
+  <div class="model_overlay">
+    <div class="modal-container">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <form
+          [formGroup]="newCustomerForm"
+          (ngSubmit)="newCustomer()"
+          class="form-container"
+        >
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input id="name" formControlName="fullname" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input id="phone" formControlName="phone_number" />
+          </div>
+
+          <div class="form-group">
+            <label for="state">State:</label>
+            <input id="state" formControlName="state" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company:</label>
+            <input id="company" formControlName="company" />
+          </div>
+          <div class="form-group">
+            <label for="package">Package:</label>
+            <input
+              id="package"
+              formControlName="package"
+              [value]="package"
+              readonly
+            />
+          </div>
+
+          <button
+            class="submit_button"
+            type="submit"
+            [disabled]="newCustomerForm.invalid"
+          >
+            Submit
+          </button>
+        </form>
+
+        <!-- <div class="ok_close_buttons">
+          <button class="button" (click)="closeModal()">OK</button>
+          <button class="button close_button" (click)="closeModal()">
+            Close
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  }
 </div>

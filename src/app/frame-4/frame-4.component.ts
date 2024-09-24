@@ -46,9 +46,17 @@ export class Frame4Component {
       console.log(newCustomer);
 
       try {
-        await this.CustomerdetailsService.newCustomer_details(newCustomer);
+        const new_user = await this.CustomerdetailsService.newCustomer_details(
+          newCustomer
+        );
         console.log('Customer details sent to service successfully');
+        localStorage.setItem(
+          'formData',
+          JSON.stringify(this.CustomerForm.value)
+        );
+        localStorage.setItem('id', new_user.id);
         this.showModal();
+        this.CustomerForm.reset();
       } catch (error) {
         console.error('Error sending customer details:', error);
         // Optionally show an error message to the user

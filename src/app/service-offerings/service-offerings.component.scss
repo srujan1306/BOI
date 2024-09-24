@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   background: #291550;
   color: #ffffff;
   font-family: "Inter", sans-serif;
@@ -118,6 +119,11 @@ button:active {
   transform: scale(0.95); /* Slightly shrink the button when clicked */
   background: #77a800; /* Darker background on click */
 }
+.close_button,
+.close_button:hover,
+.close_button:active {
+  background: #9b0000;
+}
 
 /* Loader styles */
 .loader {
@@ -140,6 +146,72 @@ button:active {
   100% {
     transform: rotate(360deg);
   }
+}
+
+//-----------------------
+.modal-content {
+  width: 420px;
+  height: 625px;
+  background-color: white;
+  padding: 10px;
+  padding-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+  p {
+    padding: 26px 36px;
+    margin-bottom: 0px;
+  }
+}
+.modal-container {
+  position: absolute; /* Use fixed positioning to center over the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the modal */
+  background: white;
+  // padding: 20px;
+  border-radius: 10px;
+  z-index: 100; /* Ensure it's above other content */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: auto; /* Set a fixed width for better appearance */
+  text-align: center; /* Center text */
+}
+
+.close {
+  cursor: pointer;
+  font-size: 28px;
+  color: #aaa;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
+.close:hover {
+  color: black;
+}
+
+/* Overlay for background dimming */
+.model_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99; /* Just below the modal */
+}
+
+/* Prevent background scrolling */
+body.modal-open {
+  overflow: hidden;
+}
+.ok_close_buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 }
 
 //-------------------
@@ -173,4 +245,56 @@ td:first-child {
 .features li {
   margin-bottom: 5px; /* Space between bullet points */
   font-size: 14px; /* Adjust font size as needed */
+}
+
+//-------------------------
+.form-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(237 237 237);
+}
+
+.form-group {
+  padding: 14px;
+  border: 1px solid white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+label {
+  color: black;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 65%;
+  padding: 8px;
+  border: 1px solid #ffff;
+  border-radius: 8px;
+  color: #000;
+}
+
+input:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.submit_button {
+  padding: 10px 15px;
+  background-color: #99cc01;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit_button:disabled {
+  background-color: #ccc;
 }

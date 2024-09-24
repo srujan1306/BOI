@@ -6,6 +6,7 @@ export interface newCustomer {
   state: string;
   email: number;
   company: string;
+  package: string;
 }
 @Component({
   selector: 'app-root',
