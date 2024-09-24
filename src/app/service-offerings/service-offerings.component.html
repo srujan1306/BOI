@@ -179,7 +179,12 @@
 
           <div class="form-group">
             <label for="state">State:</label>
-            <input id="state" formControlName="state" />
+            <select id="state" class="form-select" formControlName="state">
+              <option value="" disabled selected>State</option>
+              @for(state of usaStates; track $index) {
+              <option [value]="state">{{ state }}</option>
+              }
+            </select>
           </div>
 
           <div class="form-group">

@@ -296,7 +296,7 @@ input:focus {
 }
 
 .submit_button:disabled {
-  background-color: #ccc;
+  background-color: #99cc01;
 }
 .submission_success {
   p {
@@ -304,4 +304,13 @@ input:focus {
     padding: 6px;
     color: #000;
   }
+}
+.form-select {
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  width: 70%;
+  padding: 10px;
+  color: #000000; /* Default text color */
+  cursor: pointer;
 }

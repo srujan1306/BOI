@@ -17,6 +17,8 @@ import { newCustomer } from '../app.component';
   styleUrl: './service-offerings.component.scss',
 })
 export class ServiceOfferingsComponent implements OnInit {
+  usaStates: string[] = [];
+
   newCustomerForm!: FormGroup;
   isModalVisible = false;
   isLoading: boolean = false;
@@ -30,7 +32,9 @@ export class ServiceOfferingsComponent implements OnInit {
   ) {
     // formGroup -> formControlName
   }
-  ngOnInit() {
+  async ngOnInit() {
+    this.usaStates = await this.CustomerdetailsService.loadCountries();
+
     const storedData = JSON.parse(localStorage.getItem('formData') || '{}');
 
     this.newCustomerForm = this.fb.group({
@@ -63,7 +67,7 @@ export class ServiceOfferingsComponent implements OnInit {
             await this.CustomerdetailsService.updateCustomer_details(
               customer_details
             );
-          console.log('update_package done');
+          console.log('update_package done', updateUser);
           this.showSuccess = true;
         } else {
           const new_user =
@@ -71,8 +75,8 @@ export class ServiceOfferingsComponent implements OnInit {
               customer_details
             );
           console.log('Customer details sent to service successfully');
-          this.newCustomerForm.reset();
           this.showSuccess = true;
+          this.newCustomerForm.reset();
         }
       } catch (error) {
         console.error('Error sending customer details:', error);

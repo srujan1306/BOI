@@ -36,6 +36,10 @@ export class Frame4Component {
       company: '',
     });
   }
+  async ngOnInit(): Promise<void> {
+    this.usaStates = await this.CustomerdetailsService.loadCountries();
+  }
+
   async newCustomer() {
     this.isLoading = true;
     if (this.CustomerForm.valid) {
@@ -74,34 +78,7 @@ export class Frame4Component {
   get email() {
     return this.CustomerForm.get('email');
   }
-  ngOnInit(): void {
-    this.loadCountries();
-  }
 
-  loadCountries(): void {
-    fetch('country-state-city.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        const usa = data.Countries.find(
-          (country: { CountryName: string }) =>
-            country.CountryName === 'United States'
-        );
-
-        if (usa) {
-          this.usaStates = usa.States.map(
-            (state: { StateName: any }) => state.StateName
-          );
-        }
-      })
-      .catch((error) => {
-        console.error('There was a problem with the fetch operation:', error);
-      });
-  }
   showModal() {
     this.isModalVisible = true;
     document.body.classList.add('modal-open');

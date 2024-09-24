@@ -35,4 +35,32 @@ export class CustomerdetailsService {
       },
     }).then((res) => res.json());
   }
+
+  loadCountries(): Promise<string[]> {
+    return fetch('country-state-city.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        const usa = data.Countries.find(
+          (country: { CountryName: string }) =>
+            country.CountryName === 'United States'
+        );
+
+        if (usa) {
+          return usa.States.map(
+            (state: { StateName: string }) => state.StateName
+          );
+        }
+
+        return [];
+      })
+      .catch((error) => {
+        console.error('There was a problem with the fetch operation:', error);
+        return [];
+      });
+  }
 }
