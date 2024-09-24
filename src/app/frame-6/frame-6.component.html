@@ -9,7 +9,34 @@
         business goals.
       </p>
     </div>
+    @if(isMobile) {
+    <div class="packages_container">
+      <div class="gold_container box">
+        <div class="price_container">
+          <h2>GOLD</h2>
+          <h4>$100/entity</h4>
+        </div>
+        <div class="drop_arrow"></div>
+      </div>
+      <div class="diamond_container box">
+        <div class="price_container">
+          <h2>DIAMOND</h2>
+          <h4>$250/entity</h4>
+        </div>
+        <div class="drop_arrow"></div>
+      </div>
+      <div class="platinum_container box">
+        <div class="price_container">
+          <h2>PLATINUM</h2>
+          <h4>$300/entity</h4>
+        </div>
+        <div class="drop_arrow"></div>
+      </div>
+    </div>
+    } @else {
+
     <app-service-offerings />
+    }
   </div>
   <div class="proc">
     <div class="footer_company_details">
