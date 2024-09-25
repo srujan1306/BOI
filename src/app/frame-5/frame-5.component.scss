@@ -131,7 +131,7 @@
   .frame_5_images_set {
     flex-direction: column; /* Stack images vertically */
     align-items: center; /* Center align items */
-    width: 100%; /* Ensure it takes full width */
+    width: 80%; /* Ensure it takes full width */
   }
 
   .frame_5_image_1,
@@ -139,11 +139,10 @@
   .frame_5_image_5 {
     display: flex;
     align-items: center;
-    width: 100%; /* Make images responsive */
-    max-width: 640px; /* Limit maximum width */
-    height: 140px; /* Allow height to adjust */
+    width: 100%;
+    height: 140px;
     background-position: center;
-    background-size: 650px 360px;
+    background-size: 100% 240%;
     border-radius: 38px;
   }
 
@@ -152,7 +151,7 @@
     display: flex;
     align-items: center;
 
-    width: 75%; /* Adjust width */
+    width: 100%; /* Adjust width */
     height: 140px; /* Allow height to adjust */
     border-radius: 38px;
   }
@@ -197,13 +196,13 @@
   .frame_5_image_1,
   .frame_5_image_3,
   .frame_5_image_5 {
-    height: 200px; /* Adjust height */
+    height: 140px; /* Adjust height */
     width: 90%; /* Full width */
   }
 
   .frame_5_image_2,
   .frame_5_image_4 {
-    height: 200px; /* Adjust height */
+    height: 140px; /* Adjust height */
     width: 90%; /* Responsive width */
   }
 
@@ -216,9 +215,6 @@
 
 @media (max-width: 480px) {
   .frame_5 {
-    background-color: white;
-    background-size: cover; /* Maintain aspect ratio */
-    background-position: center; /* Center the background */
     height: auto;
   }
 

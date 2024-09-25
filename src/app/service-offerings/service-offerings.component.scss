@@ -314,3 +314,17 @@ input:focus {
   color: #000000; /* Default text color */
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px;
+    width: auto;
+  }
+
+  button {
+    width: 70%; /* Full width for buttons on small screens */
+  }
+
+  .modal-content {
+    width: 95%; /* Make modal content responsive */
+  }
+}
