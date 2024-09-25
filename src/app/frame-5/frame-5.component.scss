@@ -137,16 +137,22 @@
   .frame_5_image_1,
   .frame_5_image_3,
   .frame_5_image_5 {
-    width: 90%; /* Make images responsive */
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make images responsive */
     max-width: 640px; /* Limit maximum width */
     height: 140px; /* Allow height to adjust */
     background-position: center;
+    background-size: 650px 360px;
     border-radius: 38px;
   }
 
   .frame_5_image_2,
   .frame_5_image_4 {
-    width: 68%; /* Adjust width */
+    display: flex;
+    align-items: center;
+
+    width: 75%; /* Adjust width */
     height: 140px; /* Allow height to adjust */
     border-radius: 38px;
   }
@@ -167,9 +173,8 @@
   }
 
   .iso_info {
-    width: 90%; /* Make iso info responsive */
+    width: 85%; /* Make iso info responsive */
     text-align: center; /* Center text */
-    overflow: hidden; /* Prevent overflow */
   }
 }
 
@@ -193,12 +198,12 @@
   .frame_5_image_3,
   .frame_5_image_5 {
     height: 200px; /* Adjust height */
-    width: 100%; /* Full width */
+    width: 90%; /* Full width */
   }
 
   .frame_5_image_2,
   .frame_5_image_4 {
-    height: 180px; /* Adjust height */
+    height: 200px; /* Adjust height */
     width: 90%; /* Responsive width */
   }
 

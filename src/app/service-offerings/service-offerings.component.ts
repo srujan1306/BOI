@@ -70,6 +70,8 @@ export class ServiceOfferingsComponent implements OnInit {
           console.log('update_package done', updateUser);
           this.showSuccess = true;
           this.newCustomerForm.reset();
+          localStorage.removeItem('id');
+          localStorage.removeItem('formData');
         } else {
           const new_user =
             await this.CustomerdetailsService.newCustomer_details(
@@ -78,6 +80,8 @@ export class ServiceOfferingsComponent implements OnInit {
           console.log('Customer details sent to service successfully');
           this.showSuccess = true;
           this.newCustomerForm.reset();
+          localStorage.removeItem('id');
+          localStorage.removeItem('formData');
         }
       } catch (error) {
         console.error('Error sending customer details:', error);
