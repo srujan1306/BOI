@@ -47,6 +47,7 @@ export class Frame4Component {
     }
     this.isLoading = true;
     if (this.CustomerForm.valid) {
+      this.clear_fieldmissing_error();
       let newCustomer: newCustomer = {
         ...this.CustomerForm.value,
         phone_number: Number(this.CustomerForm.value.phone_number), // Convert to number
@@ -97,5 +98,8 @@ export class Frame4Component {
   closeModal() {
     this.isModalVisible = false;
     document.body.classList.remove('modal-open');
+  }
+  clear_fieldmissing_error() {
+    this.errorMessage = null;
   }
 }
