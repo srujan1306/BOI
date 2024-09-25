@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover; /* Use cover to maintain aspect ratio */
   font-family: "Inter", sans-serif;
-  height: 200vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,7 +78,14 @@
 
 .proc {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .proc_footer {
+    width: 80%;
+    height: auto;
+  }
 }
 
 //----------------------------
@@ -138,7 +145,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .frame_6 {
-    height: 85rem; /* Allow height to adjust */
+    height: auto; /* Allow height to adjust */
     padding: 10px; /* Reduce padding for tablets */
   }
   .procstat {
@@ -222,5 +229,6 @@
 
   .heading_description {
     font-size: 14px; /* Smaller font size */
+    width: 65%;
   }
 }
