@@ -138,19 +138,27 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .frame_6 {
-    height: auto; /* Allow height to adjust */
+    height: 85rem; /* Allow height to adjust */
     padding: 10px; /* Reduce padding for tablets */
   }
-
-  // .footer_title,
-  // .procstat,
-  // .bottom_image {
-  //   width: 100%; /* Full width for smaller screens */
-  //   height: auto; /* Allow height to adjust */
-  //   position: relative; /* Change to relative positioning */
-  //   margin: 0 auto; /* Center elements */
-  //   left: 0; /* Reset left position */
-  // }
+  .procstat {
+    height: 45px;
+    width: 200px;
+    bottom: 375px;
+    left: 64px;
+  }
+  .footer_title {
+    height: 150px;
+    width: 500px;
+    bottom: 160px;
+    left: 65px;
+  }
+  .bottom_image {
+    height: 500px;
+    width: 680px;
+    bottom: 62px;
+    right: 5px;
+  }
 }
 
 @media (max-width: 768px) {
