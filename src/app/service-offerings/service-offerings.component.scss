@@ -154,7 +154,7 @@ button:active {
   height: 625px;
   background-color: white;
   padding: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
   border-radius: 5px;
   text-align: center;
   display: flex;
@@ -212,6 +212,18 @@ body.modal-open {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+}
+.custom-error {
+  color: #f44336; /* Red color for error messages */
+  font-size: 0.7em; /* Smaller font size */
+  margin-top: 4px; /* Space above the error message */
+  width: max-content;
+}
+.formfill_error_container {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
 }
 
 //-------------------

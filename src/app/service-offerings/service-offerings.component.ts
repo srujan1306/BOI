@@ -24,6 +24,7 @@ export class ServiceOfferingsComponent implements OnInit {
   isLoading: boolean = false;
   package: string = '';
   showSuccess: boolean = false;
+  errorMessage: string | null = null;
 
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
@@ -46,15 +47,21 @@ export class ServiceOfferingsComponent implements OnInit {
         storedData.phone_number || '',
         [Validators.required, Validators.pattern('^[0-9]*$')],
       ],
-      state: storedData.state || '',
+      state: [storedData.state || '', [Validators.required]],
       email: [storedData.email || '', [Validators.email]],
-      company: storedData.company || '',
+      company: [storedData.company || '', [Validators.required]],
       package: this.package,
     });
   }
   async newCustomer() {
+    if (this.newCustomerForm.invalid) {
+      this.errorMessage = 'Please fill in all the fields.';
+      return;
+    }
     this.isLoading = true;
     if (this.newCustomerForm.valid) {
+      this.clear_fieldmissing_error();
+
       let customer_details: newCustomer = {
         ...this.newCustomerForm.value,
         phone_number: Number(this.newCustomerForm.value.phone_number), // Convert to number
@@ -106,5 +113,8 @@ export class ServiceOfferingsComponent implements OnInit {
     this.showModal();
     this.package = pack;
     this.newCustomerForm.patchValue({ package: this.package });
+  }
+  clear_fieldmissing_error() {
+    this.errorMessage = null;
   }
 }

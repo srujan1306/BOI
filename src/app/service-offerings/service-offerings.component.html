@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" (click)="clear_fieldmissing_error()">
   <table>
     <thead>
       <tr class="features_heading">
@@ -139,17 +139,17 @@
       <tr>
         <td></td>
         <td>
-          <button [disabled]="isLoading" (click)="prefill_package('gold')">
+          <button [disabled]="isLoading" (click)="prefill_package('GOLD')">
             Choose
           </button>
         </td>
         <td>
-          <button [disabled]="isLoading" (click)="prefill_package('diamond')">
+          <button [disabled]="isLoading" (click)="prefill_package('DIAMOND')">
             Choose
           </button>
         </td>
         <td>
-          <button [disabled]="isLoading" (click)="prefill_package('platinum')">
+          <button [disabled]="isLoading" (click)="prefill_package('PLATINUM')">
             Choose
           </button>
         </td>
@@ -205,13 +205,13 @@
               readonly
             />
           </div>
+          <div class="formfill_error_container">
+            @if (errorMessage) {
+            <div class="custom-error">{{ errorMessage }}</div>
+            }
+          </div>
 
-          <button
-            [disabled]="isLoading"
-            class="submit_button"
-            type="submit"
-            [disabled]="newCustomerForm.invalid"
-          >
+          <button [disabled]="isLoading" class="submit_button" type="submit">
             @if(!isLoading){
             <span class="button-text">Submit</span>
             } @if (isLoading) {
