@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover; /* Maintain aspect ratio */
   margin: 0;
-  height: 100vh;
+  height: auto;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -12,19 +12,24 @@
 }
 
 .main_title {
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow */
-  padding: 2rem; /* Added padding for smaller screens */
+  padding: 2rem;
+  padding-bottom: 2rem;
+  h1 {
+    font-size: 32px;
+  }
 }
 
 .title_description {
-  max-width: 450px;
-  width: 90%; // Responsive width
+  color: #c9c9c9;
+  max-width: 600px;
+  width: 100%; // Responsive width
   text-align: center;
 }
 
@@ -65,11 +70,12 @@
   .main_title {
     padding: 10px; /* Less padding on very small screens */
     h1 {
+      font-size: 20px;
       text-align: center;
     }
   }
 
   .title_description {
-    font-size: 14px; /* Smaller font size for readability */
+    font-size: 12px; /* Smaller font size for readability */
   }
 }
