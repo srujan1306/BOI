@@ -28,10 +28,10 @@
   }
 }
 .form-container {
-  padding: 40px;
+  padding: 32px;
   border: 2px solid #4b2e99;
   border-radius: 10px;
-  height: 370px;
+  height: 385px;
   width: 350px;
   display: flex;
   flex-direction: column;
@@ -187,6 +187,13 @@ button:active {
   color: #f44336; /* Red color for error messages */
   font-size: 0.7em; /* Smaller font size */
   margin-top: 4px; /* Space above the error message */
+  width: max-content;
+}
+.formfill_error_container {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 184px;
 }
 
 // .modal {

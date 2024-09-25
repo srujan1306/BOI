@@ -17,9 +17,9 @@ import { newCustomer } from '../app.component';
 })
 export class Frame4Component {
   usaStates: string[] = [];
-  phoneTouched = false;
   isModalVisible = false;
   isLoading: boolean = false;
+  errorMessage: string | null = null;
 
   CustomerForm: FormGroup;
   constructor(
@@ -31,9 +31,9 @@ export class Frame4Component {
     this.CustomerForm = this.fb.group({
       fullname: ['', [Validators.required, Validators.minLength(2)]],
       phone_number: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
-      state: '',
-      email: ['', [Validators.email]],
-      company: '',
+      state: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      company: ['', [Validators.required]],
     });
   }
   async ngOnInit(): Promise<void> {
@@ -41,6 +41,10 @@ export class Frame4Component {
   }
 
   async newCustomer() {
+    if (this.CustomerForm.invalid) {
+      this.errorMessage = 'Please fill in all the fields.';
+      return;
+    }
     this.isLoading = true;
     if (this.CustomerForm.valid) {
       let newCustomer: newCustomer = {
@@ -77,6 +81,12 @@ export class Frame4Component {
   }
   get email() {
     return this.CustomerForm.get('email');
+  }
+  get state() {
+    return this.CustomerForm.get('state');
+  }
+  get company() {
+    return this.CustomerForm.get('company');
   }
 
   showModal() {

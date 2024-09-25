@@ -44,22 +44,21 @@
               class="form_phone_field"
               placeholder="Phone"
               formControlName="phone_number"
-              (focus)="phoneTouched = true"
             />
           </div>
           <div class="validation_container">
-            @if (phoneTouched && phone_number?.hasError('required')) {
+            @if(phone_number?.touched){ @if (phone_number?.hasError('required'))
+            {
             <div class="custom-error">
               Phone number is <strong>required</strong>.
             </div>
-            } @if (phoneTouched && phone_number?.hasError('pattern')) {
+            } @if (phone_number?.hasError('pattern')) {
             <div class="custom-error">
               Phone number is <strong>invalid</strong>.
             </div>
-            }
+            } }
           </div>
         </div>
-
         <div class="input_state_group">
           <div class="state_field">
             <select class="form-select" formControlName="state">
@@ -69,10 +68,13 @@
               }
             </select>
           </div>
-          <div class="validation_container"></div>
+          <div class="validation_container">
+            @if (state?.touched) { @if (state?.hasError('required')) {
+            <div class="custom-error">State is <strong>required</strong>.</div>
+            }}
+          </div>
         </div>
       </div>
-
       <div class="input_email_group">
         <div class="email_field">
           <input
@@ -83,12 +85,15 @@
           />
         </div>
         <div class="validation_container">
-          @if (email?.touched && email?.hasError('email')) {
-          <div class="custom-error">Please enter a valid email address.</div>
-          }
+          @if(email?.touched) { @if(email?.hasError('required')) {
+          <div class="custom-error">Email is <strong>required</strong>.</div>
+          } @if (email?.hasError('email')) {
+          <div class="custom-error">
+            Please enter a <strong>valid email address.</strong>
+          </div>
+          } }
         </div>
       </div>
-
       <div class="input_company_group">
         <div class="company_field">
           <input
@@ -98,7 +103,17 @@
             formControlName="company"
           />
         </div>
-        <div class="validation_container"></div>
+        <div class="validation_container">
+          @if (company?.touched) { @if (company?.hasError('required')) {
+          <div class="custom-error">company is <strong>required</strong>.</div>
+          }}
+        </div>
+      </div>
+
+      <div class="formfill_error_container">
+        @if (errorMessage) {
+        <div class="custom-error">{{ errorMessage }}</div>
+        }
       </div>
 
       <button [disabled]="isLoading">
