@@ -1,4 +1,3 @@
-//--------------------------------------------------------------
 .animation_2 {
   position: absolute;
   z-index: 10;
@@ -26,7 +25,7 @@
   }
 }
 .component_wrapper {
-  position: relative; /* Set position relative for absolute positioning of the child */
+  position: relative;
 }
 .fixed_layer {
   height: 0px;
@@ -43,9 +42,22 @@
   color: #fff;
 }
 .component {
-  margin: 20px 0; /* Add vertical spacing between components */
+  margin: 20px 0;
 }
 
 .animation_3 {
-  margin: 20px 0; /* Add margin to separate from surrounding content */
+  margin: 20px 0;
+}
+@media (max-width: 480px) {
+  .animation_2 {
+    width: 50%;
+  }
+  .news_updates {
+    height: 28px;
+    font-size: 10px;
+    p {
+      width: 62px;
+      padding-left: 4px;
+    }
+  }
 }
