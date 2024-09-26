@@ -25,7 +25,6 @@ export class ServiceOfferingsComponent implements OnInit {
   package: string = '';
   showSuccess: boolean = false;
   errorMessage: string | null = null;
-  storedData: any;
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
     private router: Router,
@@ -36,19 +35,12 @@ export class ServiceOfferingsComponent implements OnInit {
   async ngOnInit() {
     this.usaStates = await this.CustomerdetailsService.loadCountries();
 
-    this.storedData = JSON.parse(localStorage.getItem('formData') || '{}');
     this.newCustomerForm = this.fb.group({
-      fullname: [
-        this.storedData.fullname || '',
-        [Validators.required, Validators.minLength(2)],
-      ],
-      phone_number: [
-        this.storedData.phone_number || '',
-        [Validators.required, Validators.pattern('^[0-9]*$')],
-      ],
-      state: [this.storedData.state || '', [Validators.required]],
-      email: [this.storedData.email || '', [Validators.email]],
-      company: [this.storedData.company || '', [Validators.required]],
+      fullname: ['', [Validators.required, Validators.minLength(2)]],
+      phone_number: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
+      state: ['', [Validators.required]],
+      email: ['', [Validators.email]],
+      company: ['', [Validators.required]],
       package: this.package,
     });
   }
@@ -65,7 +57,6 @@ export class ServiceOfferingsComponent implements OnInit {
         ...this.newCustomerForm.value,
         phone_number: Number(this.newCustomerForm.value.phone_number), // Convert to number
       };
-      console.log(customer_details);
       try {
         const userId = localStorage.getItem('id');
         if (userId) {
@@ -73,7 +64,6 @@ export class ServiceOfferingsComponent implements OnInit {
             await this.CustomerdetailsService.updateCustomer_details(
               customer_details
             );
-          console.log('update_package done', updateUser);
           this.showSuccess = true;
           this.newCustomerForm.reset();
           localStorage.removeItem('id');
@@ -83,7 +73,6 @@ export class ServiceOfferingsComponent implements OnInit {
             await this.CustomerdetailsService.newCustomer_details(
               customer_details
             );
-          console.log('Customer details sent to service successfully');
           this.showSuccess = true;
           this.newCustomerForm.reset();
           localStorage.removeItem('id');
