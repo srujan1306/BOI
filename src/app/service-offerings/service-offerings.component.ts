@@ -25,7 +25,7 @@ export class ServiceOfferingsComponent implements OnInit {
   package: string = '';
   showSuccess: boolean = false;
   errorMessage: string | null = null;
-
+  storedData: any;
   constructor(
     public CustomerdetailsService: CustomerdetailsService,
     private router: Router,
@@ -36,20 +36,19 @@ export class ServiceOfferingsComponent implements OnInit {
   async ngOnInit() {
     this.usaStates = await this.CustomerdetailsService.loadCountries();
 
-    const storedData = JSON.parse(localStorage.getItem('formData') || '{}');
-
+    this.storedData = JSON.parse(localStorage.getItem('formData') || '{}');
     this.newCustomerForm = this.fb.group({
       fullname: [
-        storedData.fullname || '',
+        this.storedData.fullname || '',
         [Validators.required, Validators.minLength(2)],
       ],
       phone_number: [
-        storedData.phone_number || '',
+        this.storedData.phone_number || '',
         [Validators.required, Validators.pattern('^[0-9]*$')],
       ],
-      state: [storedData.state || '', [Validators.required]],
-      email: [storedData.email || '', [Validators.email]],
-      company: [storedData.company || '', [Validators.required]],
+      state: [this.storedData.state || '', [Validators.required]],
+      email: [this.storedData.email || '', [Validators.email]],
+      company: [this.storedData.company || '', [Validators.required]],
       package: this.package,
     });
   }
@@ -110,9 +109,12 @@ export class ServiceOfferingsComponent implements OnInit {
     document.body.classList.remove('modal-open');
   }
   prefill_package(pack: string) {
-    this.showModal();
     this.package = pack;
     this.newCustomerForm.patchValue({ package: this.package });
+    this.newCustomerForm.patchValue(
+      JSON.parse(localStorage.getItem('formData') || '{}')
+    );
+    this.showModal();
   }
   clear_fieldmissing_error() {
     this.errorMessage = null;
