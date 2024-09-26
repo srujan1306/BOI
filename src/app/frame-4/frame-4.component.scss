@@ -50,7 +50,6 @@
   height: 34px;
   width: 184px;
 }
-
 .form-field,
 .form_phone_field {
   background-color: transparent;
@@ -60,7 +59,6 @@
   padding: 10px;
   color: #ffffff;
 }
-
 .form-field,
 ::placeholder,
 .form_phone_field,
@@ -68,7 +66,6 @@
   color: #e5e5e5;
   opacity: 1;
 }
-
 .form-select {
   background-color: transparent;
   border: 2px solid #4b2e99;
@@ -81,7 +78,6 @@
 .form-select option {
   color: #000000;
 }
-
 .input_name_group {
   display: flex;
   flex-direction: column;
@@ -103,7 +99,6 @@
   display: flex;
   flex-direction: column;
 }
-
 .input_email_group {
   display: flex;
   flex-direction: column;
@@ -114,7 +109,6 @@
   flex-direction: column;
   width: 107%;
 }
-
 .input-group .form-field,
 .input-group .form-select {
   flex: 1;
@@ -124,7 +118,6 @@
 .input-group .form-select {
   margin-right: 0;
 }
-
 button {
   background: #99cc01;
   border: none;
@@ -138,19 +131,16 @@ button {
   transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
-
 button:hover {
   background: #291550;
   color: #99cc01;
   border: 2px solid #99cc01;
   transform: scale(1.05);
 }
-
 button:active {
   transform: scale(0.95);
   background: #291550;
 }
-
 .loader {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-top: 3px solid #fff;
@@ -162,7 +152,6 @@ button:active {
   top: calc(50% - 12px);
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -171,14 +160,12 @@ button:active {
     transform: rotate(360deg);
   }
 }
-
 .tagline {
   margin-top: 20px;
   text-align: center;
   font-size: 14px;
   color: #dcdde1;
 }
-
 .custom-error {
   color: #f44336;
   font-size: 0.7em;
@@ -191,7 +178,6 @@ button:active {
   height: 20px;
   width: 184px;
 }
-
 .modal-content {
   background-color: white;
   padding: 10px;
@@ -205,7 +191,6 @@ button:active {
     margin-bottom: 0px;
   }
 }
-
 .modal-container {
   position: absolute;
   top: 50%;
@@ -219,13 +204,11 @@ button:active {
   width: auto;
   text-align: center;
 }
-
 .close {
   cursor: pointer;
   font-size: 24px;
   color: #aaa;
 }
-
 .close:hover {
   color: black;
 }
@@ -238,7 +221,6 @@ button:active {
   background: rgba(0, 0, 0, 0.5);
   z-index: 99;
 }
-
 body.modal-open {
   overflow: hidden;
 }
@@ -257,7 +239,6 @@ body.modal-open {
     justify-content: center;
     padding: 0px;
   }
-
   .frame_4_description {
     width: auto;
     p {
@@ -265,24 +246,20 @@ body.modal-open {
       text-wrap: balance;
     }
   }
-
   .form-container {
     width: 20rem;
     height: auto;
     padding: 20px;
   }
-
   .form-field,
   .form_phone_field {
     width: 92%;
   }
-
   .input_name_group,
   .input_email_group,
   .input_company_group {
     width: 100%;
   }
-
   .input_phone_and_state {
     flex-direction: column;
     gap: 0px;
@@ -291,15 +268,12 @@ body.modal-open {
   .form-select {
     width: 99%;
   }
-
   .phone_field {
     width: 100%;
   }
-
   button {
     width: 50%;
   }
-
   .tagline {
     font-size: 12px;
   }
