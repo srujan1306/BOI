@@ -149,14 +149,16 @@ button {
 
 /* Hover effect */
 button:hover {
-  background: #88b600; /* Darken background on hover */
-  transform: scale(1.05); /* Slightly enlarge the button */
+  background: #291550;
+  color: #99cc01;
+  border: 2px solid #99cc01; /* Darken background on hover */
+  transform: scale(1.05);
 }
 
 /* Active (click) effect */
 button:active {
   transform: scale(0.95); /* Slightly shrink the button when clicked */
-  background: #77a800; /* Darker background on click */
+  background: #291550; /* Darker background on click */
 }
 
 /* Loader styles */
