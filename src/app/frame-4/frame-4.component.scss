@@ -2,7 +2,7 @@
   position: relative;
   background-image: url("../../assets/background_4.png");
   background-repeat: no-repeat;
-  background-size: cover; /* Change from 100% 100% to cover */
+  background-size: cover;
   background-position: right center;
   height: auto;
   display: flex;
@@ -83,7 +83,7 @@
   border-radius: 10px;
   width: 100%;
   padding: 10px;
-  color: #ffffff; /* Default text color */
+  color: #ffffff;
   cursor: pointer;
 }
 .form-select option {
@@ -125,56 +125,52 @@
 
 .input-group .form-field,
 .input-group .form-select {
-  flex: 1; /* Allow inputs to grow equally */
-  margin-right: 10px; /* Space between fields */
+  flex: 1;
+  margin-right: 10px;
 }
 
 .input-group .form-select {
-  margin-right: 0; /* Remove margin on the last element */
+  margin-right: 0;
 }
 
 button {
   background: #99cc01;
   border: none;
-  width: 110px; /* Adjust as needed */
+  width: 110px;
   height: 36px;
   border-radius: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
-/* Hover effect */
 button:hover {
   background: #291550;
   color: #99cc01;
-  border: 2px solid #99cc01; /* Darken background on hover */
+  border: 2px solid #99cc01;
   transform: scale(1.05);
 }
 
-/* Active (click) effect */
 button:active {
-  transform: scale(0.95); /* Slightly shrink the button when clicked */
-  background: #291550; /* Darker background on click */
+  transform: scale(0.95);
+  background: #291550;
 }
 
-/* Loader styles */
 .loader {
-  border: 3px solid rgba(255, 255, 255, 0.3); /* Light border */
-  border-top: 3px solid #fff; /* White top */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   position: absolute;
-  left: calc(50% - 10px); /* Center horizontally */
-  top: calc(50% - 12px); /* Center vertically */
-  animation: spin 1s linear infinite; /* Spin animation */
+  left: calc(50% - 10px);
+  top: calc(50% - 12px);
+  animation: spin 1s linear infinite;
 }
 
-/* Spin animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -184,8 +180,6 @@ button:active {
   }
 }
 
-//--------------
-
 .tagline {
   margin-top: 20px;
   text-align: center;
@@ -194,9 +188,9 @@ button:active {
 }
 
 .custom-error {
-  color: #f44336; /* Red color for error messages */
-  font-size: 0.7em; /* Smaller font size */
-  margin-top: 4px; /* Space above the error message */
+  color: #f44336;
+  font-size: 0.7em;
+  margin-top: 4px;
   width: max-content;
 }
 .formfill_error_container {
@@ -221,17 +215,17 @@ button:active {
 }
 
 .modal-container {
-  position: absolute; /* Use fixed positioning to center over the viewport */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the modal */
+  transform: translate(-50%, -50%);
   background: white;
-  // padding: 20px;
+
   border-radius: 10px;
-  z-index: 100; /* Ensure it's above other content */
+  z-index: 100;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: auto; /* Set a fixed width for better appearance */
-  text-align: center; /* Center text */
+  width: auto;
+  text-align: center;
 }
 
 .close {
@@ -243,8 +237,6 @@ button:active {
 .close:hover {
   color: black;
 }
-
-/* Overlay for background dimming */
 .model_overlay {
   position: absolute;
   top: 0;
@@ -252,22 +244,18 @@ button:active {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 99; /* Just below the modal */
+  z-index: 99;
 }
 
-/* Prevent background scrolling */
 body.modal-open {
   overflow: hidden;
 }
-
-//------------------------------------------------------------
-/* Base styles for smaller screens */
 @media (max-width: 768px) {
   .frame_4 {
-    flex-direction: column; /* Stack items vertically */
-    gap: 40px; /* Reduce gap between items */
-    height: auto; /* Allow height to adjust */
-    padding: 20px; /* Add padding for better spacing */
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+    padding: 20px;
   }
   .frame_4_features {
     color: #c9c9c9;
@@ -279,7 +267,7 @@ body.modal-open {
   }
 
   .frame_4_description {
-    width: auto; /* Allow width to be dynamic */
+    width: auto;
     p {
       text-align: center;
       text-wrap: balance;
@@ -287,24 +275,24 @@ body.modal-open {
   }
 
   .form-container {
-    width: 20rem; /* Make the form responsive */
-    height: auto; /* Allow height to adjust */
-    padding: 20px; /* Adjust padding */
+    width: 20rem;
+    height: auto;
+    padding: 20px;
   }
 
   .form-field,
   .form_phone_field {
-    width: 92%; /* Full width for inputs */
+    width: 92%;
   }
 
   .input_name_group,
   .input_email_group,
   .input_company_group {
-    width: 100%; /* Full width for input groups */
+    width: 100%;
   }
 
   .input_phone_and_state {
-    flex-direction: column; /* Stack phone and state inputs */
+    flex-direction: column;
     gap: 0px;
     width: 100%;
   }
@@ -313,19 +301,17 @@ body.modal-open {
   }
 
   .phone_field {
-    width: 100%; /* Full width for phone input */
+    width: 100%;
   }
 
   button {
-    width: 50%; /* Full width for button */
+    width: 50%;
   }
 
   .tagline {
-    font-size: 12px; /* Adjust tagline font size */
+    font-size: 12px;
   }
 }
-
-/* Additional styles for very small screens */
 @media (max-width: 480px) {
   .frame_4_container {
     display: flex;
@@ -334,7 +320,7 @@ body.modal-open {
     gap: 40px;
   }
   .frame_4_heading {
-    font-size: 38px; /* Smaller heading font size */
+    font-size: 38px;
   }
   .frame_4_features {
     color: #c9c9c9;
@@ -345,7 +331,7 @@ body.modal-open {
   }
 
   .frame_4_description {
-    width: 90%; /* Further reduce description width */
+    width: 90%;
     text-align: justify;
     p {
       text-align: center;
@@ -353,7 +339,7 @@ body.modal-open {
   }
 
   .form-container {
-    padding: 10px; /* Reduce padding */
+    padding: 10px;
     width: 300px;
   }
   .input_phone_and_state {
@@ -362,17 +348,17 @@ body.modal-open {
   }
   .form-field,
   .form_phone_field {
-    width: 92%; /* Full width for inputs */
+    width: 92%;
   }
   .form-select {
     width: 100%;
   }
   button {
-    height: 38px; /* Adjust button height */
-    font-size: 14px; /* Adjust button font size */
+    height: 38px;
+    font-size: 14px;
   }
 
   .custom-error {
-    font-size: 0.6em; /* Smaller error message font size */
+    font-size: 0.6em;
   }
 }
