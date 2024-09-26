@@ -52,13 +52,11 @@ export class Frame4Component {
         ...this.CustomerForm.value,
         phone_number: Number(this.CustomerForm.value.phone_number), // Convert to number
       };
-      console.log(newCustomer);
 
       try {
         const new_user = await this.CustomerdetailsService.newCustomer_details(
           newCustomer
         );
-        console.log('Customer details sent to service successfully');
         localStorage.setItem(
           'formData',
           JSON.stringify(this.CustomerForm.value)
@@ -68,7 +66,6 @@ export class Frame4Component {
         this.CustomerForm.reset();
       } catch (error) {
         console.error('Error sending customer details:', error);
-        // Optionally show an error message to the user
       }
     }
     this.isLoading = false;
