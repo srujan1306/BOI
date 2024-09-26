@@ -3,7 +3,6 @@
   background-repeat: no-repeat;
   background-size: cover; /* Changed to cover for better responsiveness */
   height: auto; /* Change to auto for responsiveness */
-  min-height: 125vh; /* Minimum height */
   display: flex;
   flex-direction: column;
 }
@@ -31,7 +30,8 @@
   flex-direction: row;
   justify-content: center;
   font-family: "Inter", sans-serif;
-  flex-wrap: wrap; /* Allow wrapping for responsiveness */
+  flex-wrap: wrap;
+  padding-bottom: 45px;
 }
 .left_column_boxes {
   display: flex;
@@ -44,7 +44,7 @@
 }
 
 .box {
-  height: auto; /* Change to auto to let boxes adjust */
+  height: 100%; /* Change to auto to let boxes adjust */
   width: 100%; /* Full width for responsiveness */
   max-width: 350px; /* Set maximum width */
   border-radius: 24px;
@@ -161,6 +161,7 @@
   .frame_3_container {
     flex-direction: column; /* Stack columns on smaller screens */
     align-items: center; /* Center align items */
+    padding-bottom: 0px;
   }
 
   .right_column_boxes {
@@ -182,6 +183,10 @@
   .frame_3 {
     min-height: 100vh; /* Reduce minimum height for very small screens */
   }
+  .box {
+    height: 100%; /* Change to auto to let boxes adjust */
+    width: 100%; /* Full width for responsiveness */
+  }
 
   .left_box_container_1,
   .left_box_container_2,
@@ -199,7 +204,11 @@
       font-size: 16px;
     }
   }
-
+  .left_box_container_3 {
+    h2 {
+      margin-top: 0px;
+    }
+  }
   .book_call_container {
     margin: 10px; /* Reduce margin */
   }

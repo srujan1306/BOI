@@ -1,131 +1,134 @@
 <section class="frame_4" (click)="clear_fieldmissing_error()">
-  <div class="frame_4_features">
-    <h1 class="frame_4_heading">Flexible for You.</h1>
-    <div class="frame_4_description">
-      <p>
-        The team of experts that simplifies BOI reporting and meets your
-        requirements as per your filing needs.
-      </p>
-    </div>
-    <ul>
-      <li>The BOI software that simplifies</li>
-      <li>BOI reporting and the only platform</li>
-      <li>that provides flexibility to fit</li>
-      <li>your BOI management needs.</li>
-    </ul>
-  </div>
-  <form [formGroup]="CustomerForm" (ngSubmit)="newCustomer()">
-    <div class="form-container">
-      <div class="input_name_group">
-        <div class="name_field">
-          <input
-            type="text"
-            placeholder="Full Name"
-            formControlName="fullname"
-            class="form-field"
-          />
-        </div>
-        <div class="validation_container">
-          @if (fullname?.touched) { @if (fullname?.hasError('required')) {
-          <div class="custom-error">Name is <strong>required</strong>.</div>
-          } @if (fullname?.hasError('minlength')) {
-          <div class="custom-error">
-            Full Name is <strong>very short</strong>.
-          </div>
-          } }
-        </div>
+  <div class="frame_4_container">
+    <div class="frame_4_features">
+      <h1 class="frame_4_heading">Flexible for You.</h1>
+      <div class="frame_4_description">
+        <p>
+          The team of experts that simplifies BOI reporting and meets your
+          requirements as per your filing needs.
+        </p>
       </div>
-
-      <div class="input_phone_and_state">
-        <div class="input_phone_group">
-          <div class="phone_field">
+      <ul>
+        <li>The BOI software that simplifies</li>
+        <li>BOI reporting and the only platform</li>
+        <li>that provides flexibility to fit</li>
+        <li>your BOI management needs.</li>
+      </ul>
+    </div>
+    <form [formGroup]="CustomerForm" (ngSubmit)="newCustomer()">
+      <div class="form-container">
+        <div class="input_name_group">
+          <div class="name_field">
             <input
               type="text"
-              class="form_phone_field"
-              placeholder="Phone"
-              formControlName="phone_number"
+              placeholder="Full Name"
+              formControlName="fullname"
+              class="form-field"
             />
           </div>
           <div class="validation_container">
-            @if(phone_number?.touched){ @if (phone_number?.hasError('required'))
-            {
+            @if (fullname?.touched) { @if (fullname?.hasError('required')) {
+            <div class="custom-error">Name is <strong>required</strong>.</div>
+            } @if (fullname?.hasError('minlength')) {
             <div class="custom-error">
-              Phone number is <strong>required</strong>.
-            </div>
-            } @if (phone_number?.hasError('pattern')) {
-            <div class="custom-error">
-              Phone number is <strong>invalid</strong>.
+              Full Name is <strong>very short</strong>.
             </div>
             } }
           </div>
         </div>
-        <div class="input_state_group">
-          <div class="state_field">
-            <select class="form-select" formControlName="state">
-              <option value="" disabled selected>State</option>
-              @for(state of usaStates; track $index) {
-              <option [value]="state">{{ state }}</option>
-              }
-            </select>
+        <div class="input_phone_and_state">
+          <div class="input_phone_group">
+            <div class="phone_field">
+              <input
+                type="text"
+                class="form_phone_field"
+                placeholder="Phone"
+                formControlName="phone_number"
+              />
+            </div>
+            <div class="validation_container">
+              @if(phone_number?.touched){ @if
+              (phone_number?.hasError('required')) {
+              <div class="custom-error">
+                Phone number is <strong>required</strong>.
+              </div>
+              } @if (phone_number?.hasError('pattern')) {
+              <div class="custom-error">
+                Phone number is <strong>invalid</strong>.
+              </div>
+              } }
+            </div>
+          </div>
+          <div class="input_state_group">
+            <div class="state_field">
+              <select class="form-select" formControlName="state">
+                <option value="" disabled selected>State</option>
+                @for(state of usaStates; track $index) {
+                <option [value]="state">{{ state }}</option>
+                }
+              </select>
+            </div>
+            <div class="validation_container">
+              @if (state?.touched) { @if (state?.hasError('required')) {
+              <div class="custom-error">
+                State is <strong>required</strong>.
+              </div>
+              }}
+            </div>
+          </div>
+        </div>
+        <div class="input_email_group">
+          <div class="email_field">
+            <input
+              type="email"
+              class="form-field"
+              placeholder="Email"
+              formControlName="email"
+            />
           </div>
           <div class="validation_container">
-            @if (state?.touched) { @if (state?.hasError('required')) {
-            <div class="custom-error">State is <strong>required</strong>.</div>
+            @if(email?.touched) { @if(email?.hasError('required')) {
+            <div class="custom-error">Email is <strong>required</strong>.</div>
+            } @if (email?.hasError('email')) {
+            <div class="custom-error">
+              Please enter a <strong>valid email address.</strong>
+            </div>
+            } }
+          </div>
+        </div>
+        <div class="input_company_group">
+          <div class="company_field">
+            <input
+              type="text"
+              class="form-field"
+              placeholder="Company"
+              formControlName="company"
+            />
+          </div>
+          <div class="validation_container">
+            @if (company?.touched) { @if (company?.hasError('required')) {
+            <div class="custom-error">
+              company is <strong>required</strong>.
+            </div>
             }}
           </div>
         </div>
-      </div>
-      <div class="input_email_group">
-        <div class="email_field">
-          <input
-            type="email"
-            class="form-field"
-            placeholder="Email"
-            formControlName="email"
-          />
+        <div class="formfill_error_container">
+          @if (errorMessage) {
+          <div class="custom-error">{{ errorMessage }}</div>
+          }
         </div>
-        <div class="validation_container">
-          @if(email?.touched) { @if(email?.hasError('required')) {
-          <div class="custom-error">Email is <strong>required</strong>.</div>
-          } @if (email?.hasError('email')) {
-          <div class="custom-error">
-            Please enter a <strong>valid email address.</strong>
-          </div>
-          } }
-        </div>
+        <button [disabled]="isLoading">
+          @if(!isLoading){
+          <span class="button-text">Book a Call</span>
+          } @if (isLoading) {
+          <span class="loader"></span>
+          }
+        </button>
+        <div class="tagline">Save 40% on pocket and 100% on stress.</div>
       </div>
-      <div class="input_company_group">
-        <div class="company_field">
-          <input
-            type="text"
-            class="form-field"
-            placeholder="Company"
-            formControlName="company"
-          />
-        </div>
-        <div class="validation_container">
-          @if (company?.touched) { @if (company?.hasError('required')) {
-          <div class="custom-error">company is <strong>required</strong>.</div>
-          }}
-        </div>
-      </div>
-
-      <div class="formfill_error_container">
-        @if (errorMessage) {
-        <div class="custom-error">{{ errorMessage }}</div>
-        }
-      </div>
-
-      <button [disabled]="isLoading">
-        @if(!isLoading){
-        <span class="button-text">Book a Call</span>
-        } @if (isLoading) {
-        <span class="loader"></span>
-        }
-      </button>
-      <div class="tagline">Save 40% on pocket and 100% on stress.</div>
-    </div>
-  </form>
+    </form>
+  </div>
   @if(isModalVisible){
   <div class="model_overlay">
     <div class="modal-container">

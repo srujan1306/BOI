@@ -9,6 +9,18 @@
   color: #291550;
   font-family: "Inter", sans-serif;
   margin-top: 34px;
+  h2 {
+    font-size: 30px;
+    padding-bottom: 0px;
+  }
+}
+.iso_heading {
+  color: #291550;
+  font-family: "Inter", sans-serif;
+  margin-top: 75px;
+  h2 {
+    margin-bottom: 0px;
+  }
 }
 .frame_5_images_set {
   display: flex;
@@ -221,6 +233,7 @@
 
   .frame_5_heading {
     font-size: 18px; /* Smaller heading font size */
+    margin-top: 0px;
   }
 
   .frame_5_image_1,
@@ -238,6 +251,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
+  .iso_heading {
+    margin-top: 50px;
   }
 
   .iso_info p {
