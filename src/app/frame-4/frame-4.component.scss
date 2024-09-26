@@ -20,19 +20,20 @@
 }
 .frame_4_features {
   color: #c9c9c9;
+  li {
+    line-height: 34px;
+  }
 }
 .frame_4_heading {
   font-size: 32px;
   margin: 0;
   margin-bottom: 8px;
   color: white;
-  text-align: center;
 }
 .frame_4_description {
   width: 340px;
   p {
     margin: 0;
-    text-align: center;
   }
 }
 .form-container {
