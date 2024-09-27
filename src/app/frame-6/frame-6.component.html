@@ -17,7 +17,14 @@
             <h2>GOLD</h2>
             <h4>$100/entity</h4>
           </div>
-          <div class="drop_arrow"></div>
+          <div class="drop_arrow">
+            @if(isDropdown_gold) {
+            <img src="hide_arrow.png" alt="" />
+            } @else {
+            <img src="expand_arrow.png" alt="" />
+
+            }
+          </div>
         </div>
         @if(isDropdown_gold) {
         <div class="dropdown_container">
@@ -39,7 +46,14 @@
             <h2>DIAMOND</h2>
             <h4>$250/entity</h4>
           </div>
-          <div class="drop_arrow"></div>
+          <div class="drop_arrow">
+            @if(isDropdown_diamond) {
+            <img src="hide_arrow.png" alt="" />
+            } @else {
+            <img src="expand_arrow.png" alt="" />
+
+            }
+          </div>
         </div>
         @if(isDropdown_diamond) {
         <div class="dropdown_container">
@@ -68,7 +82,14 @@
             <h2>PLATINUM</h2>
             <h4>$300/entity</h4>
           </div>
-          <div class="drop_arrow"></div>
+          <div class="drop_arrow">
+            @if(isDropdown_platinum) {
+            <img src="hide_arrow.png" alt="" />
+            } @else {
+            <img src="expand_arrow.png" alt="" />
+
+            }
+          </div>
         </div>
         @if(isDropdown_platinum) {
         <div class="dropdown_container">
