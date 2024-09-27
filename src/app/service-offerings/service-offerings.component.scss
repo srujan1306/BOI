@@ -208,11 +208,7 @@ button:active {
 body.modal-open {
   overflow: hidden;
 }
-.ok_close_buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-}
+
 .custom-error {
   color: #f44336; /* Red color for error messages */
   font-size: 0.7em; /* Smaller font size */
