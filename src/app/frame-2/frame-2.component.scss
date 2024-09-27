@@ -49,19 +49,24 @@
 }
 
 .image_container {
-  background-image: url("../../assets/customer_support_image.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; /* Use cover for better aspect ratio */
+  position: relative;
   height: 450px;
   width: 100%;
   max-width: 420px;
-  border-radius: 35px;
   display: flex;
-  align-items: flex-start; /* Align text to the bottom */
-  padding: 20px; /* Add padding for text */
+  align-items: flex-start;
+}
+.image_container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
 }
 
 .image_container p {
+  padding: 20px;
+  position: absolute;
+  z-index: 10;
   color: white;
   font-size: 18px;
 }
