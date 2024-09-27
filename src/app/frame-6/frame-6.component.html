@@ -20,11 +20,16 @@
           <div class="drop_arrow"></div>
         </div>
         @if(isDropdown_gold) {
-        <div>
-          <ul>
-            <li>Entry Update - No Update</li>
-            <li>File report with FinCEN</li>
-          </ul>
+        <div class="dropdown_container">
+          <div class="package_features">
+            <ul>
+              <li>Entry Update - No Update</li>
+              <li>File report with FinCEN</li>
+            </ul>
+          </div>
+          <button [disabled]="isLoading" (click)="prefill_package('GOLD')">
+            Choose
+          </button>
         </div>
         }
       </div>
@@ -37,18 +42,23 @@
           <div class="drop_arrow"></div>
         </div>
         @if(isDropdown_diamond) {
-        <div>
-          <ul>
-            <li>Entry Update - Update Once</li>
-            <li>File report with FinCEN.</li>
-            <li>
-              Automated, secure beneficial ownership information collection.
-            </li>
-            <li>Unlimited company and BOI data storage.</li>
-            <li>Dashboard to manage BOI for all your entities.</li>
-            <li>Connect beneficial owners to multiple entities.</li>
-            <li>Unlimited, free Change of Information filings.</li>
-          </ul>
+        <div class="dropdown_container">
+          <div class="package_features">
+            <ul>
+              <li>Entry Update - Update Once</li>
+              <li>File report with FinCEN.</li>
+              <li>
+                Automated, secure beneficial ownership information collection.
+              </li>
+              <li>Unlimited company and BOI data storage.</li>
+              <li>Dashboard to manage BOI for all your entities.</li>
+              <li>Connect beneficial owners to multiple entities.</li>
+              <li>Unlimited, free Change of Information filings.</li>
+            </ul>
+          </div>
+          <button [disabled]="isLoading" (click)="prefill_package('GOLD')">
+            Choose
+          </button>
         </div>
         }
       </div>
@@ -61,22 +71,27 @@
           <div class="drop_arrow"></div>
         </div>
         @if(isDropdown_platinum) {
-        <div>
-          <ul>
-            <li>Entry Update - Unlimited</li>
-            <li>File report with FinCEN.</li>
-            <li>
-              Automated, secure beneficial ownership information collection.
-            </li>
-            <li>Unlimited company and BOI data storage.</li>
-            <li>Dashboard to manage BOI for all your entities.</li>
-            <li>Connect beneficial owners to multiple entities.</li>
-            <li>Unlimited, free Change of Information filings.</li>
-            <li>Access to BOI Monitoring Services and filing reminders.</li>
-            <li>Priority customer support during the filing process.</li>
-            <li>Customized Cover Letter.</li>
-            <li>Customized Email to Beneficial Owners.</li>
-          </ul>
+        <div class="dropdown_container">
+          <div class="package_features">
+            <ul>
+              <li>Entry Update - Unlimited</li>
+              <li>File report with FinCEN.</li>
+              <li>
+                Automated, secure beneficial ownership information collection.
+              </li>
+              <li>Unlimited company and BOI data storage.</li>
+              <li>Dashboard to manage BOI for all your entities.</li>
+              <li>Connect beneficial owners to multiple entities.</li>
+              <li>Unlimited, free Change of Information filings.</li>
+              <li>Access to BOI Monitoring Services and filing reminders.</li>
+              <li>Priority customer support during the filing process.</li>
+              <li>Customized Cover Letter.</li>
+              <li>Customized Email to Beneficial Owners.</li>
+            </ul>
+          </div>
+          <button [disabled]="isLoading" (click)="prefill_package('GOLD')">
+            Choose
+          </button>
         </div>
         }
       </div>

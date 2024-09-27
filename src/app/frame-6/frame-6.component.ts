@@ -10,6 +10,7 @@ import { ServiceOfferingsComponent } from '../service-offerings/service-offering
 })
 export class Frame6Component implements OnInit {
   isMobile: boolean = false;
+  isLoading: boolean = false;
 
   ngOnInit(): void {
     this.checkScreenSize();
@@ -39,5 +40,14 @@ export class Frame6Component implements OnInit {
     } else {
       this.isDropdown_platinum = !this.isDropdown_platinum;
     }
+  }
+
+  prefill_package(pack: string) {
+    // this.package = pack;
+    // this.newCustomerForm.patchValue({ package: this.package });
+    // this.newCustomerForm.patchValue(
+    //   JSON.parse(localStorage.getItem('formData') || '{}')
+    // );
+    // this.showModal();
   }
 }
