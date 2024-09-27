@@ -27,4 +27,17 @@ export class Frame6Component implements OnInit {
       console.log('Screen size is less than 480px');
     }
   }
+  isDropdown_gold: boolean = false;
+  isDropdown_diamond: boolean = false;
+  isDropdown_platinum: boolean = false;
+
+  toggle_dropdown(serice_pack: string) {
+    if (serice_pack == 'gold') {
+      this.isDropdown_gold = !this.isDropdown_gold;
+    } else if (serice_pack == 'diamond') {
+      this.isDropdown_diamond = !this.isDropdown_diamond;
+    } else {
+      this.isDropdown_platinum = !this.isDropdown_platinum;
+    }
+  }
 }
