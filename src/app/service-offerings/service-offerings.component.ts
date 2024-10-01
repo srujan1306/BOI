@@ -39,9 +39,9 @@ export class ServiceOfferingsComponent implements OnInit {
       fullname: ['', [Validators.required, Validators.minLength(2)]],
       phone_number: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       state: ['', [Validators.required]],
-      email: ['', [Validators.email]],
+      email: ['', [Validators.required, Validators.email]],
       company: ['', [Validators.required]],
-      package: this.package,
+      package: [this.package],
     });
   }
   async newCustomer() {
@@ -66,6 +66,9 @@ export class ServiceOfferingsComponent implements OnInit {
             );
           this.showSuccess = true;
           this.newCustomerForm.reset();
+          this.newCustomerForm.patchValue({ package: this.package });
+          this.newCustomerForm.get('state')?.setValue('');
+
           localStorage.removeItem('id');
           localStorage.removeItem('formData');
         } else {
@@ -75,6 +78,9 @@ export class ServiceOfferingsComponent implements OnInit {
             );
           this.showSuccess = true;
           this.newCustomerForm.reset();
+          this.newCustomerForm.patchValue({ package: this.package });
+          this.newCustomerForm.get('state')?.setValue('');
+
           localStorage.removeItem('id');
           localStorage.removeItem('formData');
         }
@@ -107,5 +113,20 @@ export class ServiceOfferingsComponent implements OnInit {
   }
   clear_fieldmissing_error() {
     this.errorMessage = null;
+  }
+  get fullname() {
+    return this.newCustomerForm.get('fullname');
+  }
+  get phone_number() {
+    return this.newCustomerForm.get('phone_number');
+  }
+  get email() {
+    return this.newCustomerForm.get('email');
+  }
+  get state() {
+    return this.newCustomerForm.get('state');
+  }
+  get company() {
+    return this.newCustomerForm.get('company');
   }
 }
