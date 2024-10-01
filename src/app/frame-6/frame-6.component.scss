@@ -343,18 +343,18 @@
     overflow: hidden;
   }
 
-  .custom-error {
-    color: #f44336; /* Red color for error messages */
-    font-size: 0.7em; /* Smaller font size */
-    margin-top: 4px; /* Space above the error message */
-    width: max-content;
-  }
-  .formfill_error_container {
-    display: flex;
-    justify-content: center;
-    height: 20px;
-    width: 100%;
-  }
+  // .custom-error {
+  //   color: #f44336; /* Red color for error messages */
+  //   font-size: 0.7em; /* Smaller font size */
+  //   margin-top: 4px; /* Space above the error message */
+  //   width: max-content;
+  // }
+  // .formfill_error_container {
+  //   display: flex;
+  //   justify-content: center;
+  //   height: 20px;
+  //   width: 100%;
+  // }
   // .form-container {
   //   width: 85%;
   //   margin: 0 auto;
@@ -365,16 +365,16 @@
   //   background-color: rgb(237 237 237);
   // }
 
-  .form-group {
-    padding: 14px;
-    border: 1px solid white;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-  }
+  // .form-group {
+  //   padding: 14px;
+  //   border: 1px solid white;
+  //   border-radius: 12px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   margin-bottom: 15px;
+  // }
 
   // label {
   //   color: black;
@@ -389,10 +389,10 @@
   //   color: #000;
   // }
 
-  input:focus {
-    border-color: #66afe9;
-    outline: none;
-  }
+  // input:focus {
+  //   border-color: #66afe9;
+  //   outline: none;
+  // }
 
   // .submit_button {
   //   padding: 10px 15px;
@@ -413,15 +413,15 @@
   //     color: #000;
   //   }
   // }
-  .form-select {
-    background-color: white;
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    width: 70%;
-    padding: 10px;
-    color: #000000; /* Default text color */
-    cursor: pointer;
-  }
+  // .form-select {
+  //   background-color: white;
+  //   border: 2px solid #ffffff;
+  //   border-radius: 10px;
+  //   width: 70%;
+  //   padding: 10px;
+  //   color: #000000; /* Default text color */
+  //   cursor: pointer;
+  // }
 
   //----------------------
   .form-container {
@@ -496,48 +496,48 @@
     font-family: "Inter", sans-serif;
     color: #000000;
   }
-  button {
-    background: #99cc01;
-    border: none;
-    width: 110px;
-    height: 36px;
-    border-radius: 12px;
-    font-family: "Inter", sans-serif;
-    font-weight: 600;
-    position: relative;
-    overflow: hidden;
-    transition: background 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-  }
-  button:hover {
-    background: #291550;
-    color: #99cc01;
-    border: 2px solid #99cc01;
-    transform: scale(1.05);
-  }
-  button:active {
-    transform: scale(0.95);
-    background: #291550;
-  }
-  .loader {
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top: 3px solid #fff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: calc(50% - 10px);
-    top: calc(50% - 12px);
-    animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+  // button {
+  //   background: #99cc01;
+  //   border: none;
+  //   width: 110px;
+  //   height: 36px;
+  //   border-radius: 12px;
+  //   font-family: "Inter", sans-serif;
+  //   font-weight: 600;
+  //   position: relative;
+  //   overflow: hidden;
+  //   transition: background 0.3s ease, transform 0.2s ease;
+  //   cursor: pointer;
+  // }
+  // button:hover {
+  //   background: #291550;
+  //   color: #99cc01;
+  //   border: 2px solid #99cc01;
+  //   transform: scale(1.05);
+  // }
+  // button:active {
+  //   transform: scale(0.95);
+  //   background: #291550;
+  // }
+  // .loader {
+  //   border: 3px solid rgba(255, 255, 255, 0.3);
+  //   border-top: 3px solid #fff;
+  //   border-radius: 50%;
+  //   width: 20px;
+  //   height: 20px;
+  //   position: absolute;
+  //   left: calc(50% - 10px);
+  //   top: calc(50% - 12px);
+  //   animation: spin 1s linear infinite;
+  // }
+  // @keyframes spin {
+  //   0% {
+  //     transform: rotate(0deg);
+  //   }
+  //   100% {
+  //     transform: rotate(360deg);
+  //   }
+  // }
   .tagline {
     margin-top: 10px;
     text-align: center;
@@ -564,6 +564,7 @@
       color: #ffffff;
     }
   }
+  .form-select:focus,
   input:focus {
     border-color: #66afe9;
     outline: none;
