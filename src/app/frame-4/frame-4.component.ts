@@ -64,6 +64,7 @@ export class Frame4Component {
         localStorage.setItem('id', new_user.id);
         this.showModal();
         this.CustomerForm.reset();
+        this.CustomerForm.get('state')?.setValue('');
       } catch (error) {
         console.error('Error sending customer details:', error);
       }

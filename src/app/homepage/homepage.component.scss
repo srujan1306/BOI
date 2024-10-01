@@ -24,6 +24,35 @@
     padding-left: 8px;
   }
 }
+//-----------------
+.scroll-container {
+  height: 50%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  position: absolute; /* Use absolute positioning */
+  white-space: nowrap; /* Keep this to align items in a single line */
+  animation: scroll 40s linear infinite; /* Control scrolling speed */
+}
+
+.scroll-item {
+  padding-right: 50px;
+  display: inline; /* Ensure each item is treated as an inline block */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%); /* Move all items out of view */
+  }
+}
+
+//-------------------
 .component_wrapper {
   position: relative;
 }

@@ -26,6 +26,11 @@ import { AnimationsService } from '../animations.service';
   styleUrl: './homepage.component.scss',
 })
 export class HomepageComponent implements AfterViewInit {
+  items: string[] = [
+    'Qualifying business entities formed prior to January 1, 2024 have until January 1, 2025 to electronically submit their report to FinCEN.',
+    'Qualifying business entities formed prior to January 1, 2024 have until January 1, 2025 to electronically submit their report to FinCEN.',
+    'Qualifying business entities formed prior to January 1, 2024 have until January 1, 2025 to electronically submit their report to FinCEN.',
+  ];
   constructor(
     private el: ElementRef,
     private animationService: AnimationsService

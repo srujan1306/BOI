@@ -139,8 +139,11 @@
   <div class="model_overlay">
     <div class="modal-container">
       <div class="modal-content">
-        <span class="close" (click)="closeModal()">&times;</span>
-        <form
+        <div class="heading_close_bar">
+          <h1>Flexible for You.</h1>
+          <span class="close" (click)="closeModal()">&times;</span>
+        </div>
+        <!-- <form
           [formGroup]="newCustomerForm"
           (ngSubmit)="newCustomer()"
           class="form-container"
@@ -201,6 +204,135 @@
             <p>Your details are submitted successfully!</p>
           </div>
           }
+        </form> -->
+        <form [formGroup]="newCustomerForm" (ngSubmit)="newCustomer()">
+          <div class="form-container">
+            <!-- <div class="input_name_group"> -->
+            <div class="name_field">
+              <input
+                type="text"
+                placeholder="Full Name"
+                formControlName="fullname"
+                class="form_field_name"
+              />
+            </div>
+            <div class="validation_container">
+              @if (fullname?.touched) { @if (fullname?.hasError('required')) {
+              <div class="custom-error">Name is <strong>required</strong>.</div>
+              } @if (fullname?.hasError('minlength')) {
+              <div class="custom-error">
+                Full Name is <strong>very short</strong>.
+              </div>
+              } }
+            </div>
+            <!-- </div> -->
+
+            <!-- <div class="input_phone_group"> -->
+            <div class="phone_field">
+              <input
+                type="text"
+                class="form_phone_field"
+                placeholder="Phone"
+                formControlName="phone_number"
+              />
+            </div>
+            <div class="validation_container">
+              @if(phone_number?.touched){ @if
+              (phone_number?.hasError('required')) {
+              <div class="custom-error">
+                Phone number is <strong>required</strong>.
+              </div>
+              } @if (phone_number?.hasError('pattern')) {
+              <div class="custom-error">
+                Phone number is <strong>invalid</strong>.
+              </div>
+              } }
+            </div>
+            <!-- </div> -->
+            <!-- <div class="input_state_group"> -->
+            <div class="state_field">
+              <select class="form-select" formControlName="state" title="State">
+                <option value="" disabled selected>State</option>
+                @for(state of usaStates; track $index) {
+                <option [value]="state">{{ state }}</option>
+                }
+              </select>
+            </div>
+            <div class="validation_container">
+              @if (state?.touched) { @if (state?.hasError('required')) {
+              <div class="custom-error">
+                State is <strong>required</strong>.
+              </div>
+              }}
+            </div>
+            <!-- </div> -->
+
+            <!-- <div class="input_email_group"> -->
+            <div class="email_field">
+              <input
+                type="email"
+                class="form_field_email"
+                placeholder="Email"
+                formControlName="email"
+              />
+            </div>
+            <div class="validation_container">
+              @if(email?.touched) { @if(email?.hasError('required')) {
+              <div class="custom-error">
+                Email is <strong>required</strong>.
+              </div>
+              } @if (email?.hasError('email')) {
+              <div class="custom-error">
+                Please enter a <strong>valid email address.</strong>
+              </div>
+              } }
+            </div>
+            <!-- </div> -->
+            <!-- <div class="input_company_group"> -->
+            <div class="company_field">
+              <input
+                type="text"
+                class="form_field_company"
+                placeholder="Company"
+                formControlName="company"
+              />
+            </div>
+            <div class="validation_container">
+              @if (company?.touched) { @if (company?.hasError('required')) {
+              <div class="custom-error">
+                company is <strong>required</strong>.
+              </div>
+              }}
+            </div>
+            <!-- <div class="form-group"> -->
+            <input
+              id="package"
+              class="form_field_package"
+              formControlName="package"
+              [value]="package"
+              readonly
+            />
+            <!-- </div> -->
+            <!-- </div> -->
+            <div class="formfill_error_container">
+              @if (errorMessage) {
+              <div class="custom-error">{{ errorMessage }}</div>
+              }
+            </div>
+            <button [disabled]="isLoading">
+              @if(!isLoading){
+              <span class="button-text">Book a Call</span>
+              } @if (isLoading) {
+              <span class="loader"></span>
+              }
+            </button>
+            @if(showSuccess) {
+            <div class="submission_success">
+              <p>Your details are submitted successfully!</p>
+            </div>
+            }
+            <div class="tagline">Save 40% on pocket and 100% on stress.</div>
+          </div>
         </form>
       </div>
     </div>
