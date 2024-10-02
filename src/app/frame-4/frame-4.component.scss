@@ -49,6 +49,11 @@
   justify-content: center;
   margin: 20px 0px;
 }
+.input_name_group {
+  display: flex;
+  flex-direction: column;
+  width: 107%;
+}
 .validation_container {
   height: 34px;
   width: 184px;
@@ -79,13 +84,10 @@
   cursor: pointer;
 }
 .form-select option {
+  font-family: "Inter", sans-serif;
   color: #000000;
 }
-.input_name_group {
-  display: flex;
-  flex-direction: column;
-  width: 107%;
-}
+
 .input_phone_and_state {
   display: flex;
   flex-direction: row;
