@@ -1,3 +1,17 @@
+.component_wrapper {
+  position: relative;
+}
+.component {
+  margin: 20px 0;
+}
+.fixed_layer {
+  height: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .animation_2 {
   position: absolute;
   z-index: 10;
@@ -24,7 +38,6 @@
     padding-left: 8px;
   }
 }
-//-----------------
 .scroll-container {
   height: 50%;
   width: 100%;
@@ -33,14 +46,14 @@
 }
 
 .scroll-content {
-  position: absolute; /* Use absolute positioning */
-  white-space: nowrap; /* Keep this to align items in a single line */
-  animation: scroll 40s linear infinite; /* Control scrolling speed */
+  position: absolute;
+  white-space: nowrap;
+  animation: scroll 40s linear infinite;
 }
 
 .scroll-item {
   padding-right: 50px;
-  display: inline; /* Ensure each item is treated as an inline block */
+  display: inline;
 }
 
 @keyframes scroll {
@@ -48,34 +61,14 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%); /* Move all items out of view */
+    transform: translateX(-100%);
   }
-}
-
-//-------------------
-.component_wrapper {
-  position: relative;
-}
-.fixed_layer {
-  height: 0px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 .footer {
   text-align: center;
   padding: 2px;
   background-color: #000000;
   color: #fff;
-}
-.component {
-  margin: 20px 0;
-}
-
-.animation_3 {
-  margin: 20px 0;
 }
 @media (max-width: 480px) {
   .animation_2 {

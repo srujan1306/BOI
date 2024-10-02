@@ -165,91 +165,14 @@
           <h1>Flexible for You.</h1>
           <span class="close" (click)="closeModal()">&times;</span>
         </div>
-        <!-- <form
-          [formGroup]="newCustomerForm"
-          (ngSubmit)="newCustomer()"
-          class="form-container"
-        >
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input id="name" formControlName="fullname" placeholder="Name" />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input
-              id="phone"
-              formControlName="phone_number"
-              placeholder="Phone"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="state">State:</label>
-            <select
-              id="state"
-              class="form-select"
-              formControlName="state"
-              placeholder="State"
-            >
-              <option value="" disabled selected>State</option>
-              @for(state of usaStates; track $index) {
-              <option [value]="state">{{ state }}</option>
-              }
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input id="email" formControlName="email" placeholder="Email" />
-          </div>
-
-          <div class="form-group">
-            <label for="company">Company:</label>
-            <input
-              id="company"
-              formControlName="company"
-              placeholder="Company"
-            />
-          </div>
-          <div class="form-group">
-            <label for="package">Package:</label>
-            <input
-              id="package"
-              formControlName="package"
-              [value]="package"
-              placeholder="Plan"
-              readonly
-            />
-          </div>
-          <div class="formfill_error_container">
-            @if (errorMessage) {
-            <div class="custom-error">{{ errorMessage }}</div>
-            }
-          </div>
-
-          <button [disabled]="isLoading" class="submit_button" type="submit">
-            @if(!isLoading){
-            <span class="button-text">Submit</span>
-            } @if (isLoading) {
-            <span class="loader"></span>
-            }
-          </button>
-          @if(showSuccess) {
-          <div class="submission_success">
-            <p>Your details are submitted successfully!</p>
-          </div>
-          }
-        </form> -->
         <form [formGroup]="newCustomerForm" (ngSubmit)="newCustomer()">
           <div class="form-container">
-            <!-- <div class="input_name_group"> -->
-            <div class="name_field">
+            <div class="form_field">
               <input
                 type="text"
                 placeholder="Full Name"
                 formControlName="fullname"
-                class="form_field_name"
+                class="form_fields"
               />
             </div>
             <div class="validation_container">
@@ -261,13 +184,10 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-
-            <!-- <div class="input_phone_group"> -->
-            <div class="phone_field">
+            <div class="form_field">
               <input
                 type="text"
-                class="form_phone_field"
+                class="form_fields"
                 placeholder="Phone"
                 formControlName="phone_number"
               />
@@ -284,9 +204,7 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-            <!-- <div class="input_state_group"> -->
-            <div class="state_field">
+            <div class="form_field">
               <select class="form-select" formControlName="state" title="State">
                 <option value="" disabled selected>State</option>
                 @for(state of usaStates; track $index) {
@@ -301,13 +219,10 @@
               </div>
               }}
             </div>
-            <!-- </div> -->
-
-            <!-- <div class="input_email_group"> -->
-            <div class="email_field">
+            <div class="form_field">
               <input
                 type="email"
-                class="form_field_email"
+                class="form_fields"
                 placeholder="Email"
                 formControlName="email"
               />
@@ -323,12 +238,10 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-            <!-- <div class="input_company_group"> -->
-            <div class="company_field">
+            <div class="form_field">
               <input
                 type="text"
-                class="form_field_company"
+                class="form_fields"
                 placeholder="Company"
                 formControlName="company"
               />
@@ -340,16 +253,13 @@
               </div>
               }}
             </div>
-            <!-- <div class="form-group"> -->
             <input
               id="package"
-              class="form_field_package"
+              class="form_fields"
               formControlName="package"
               [value]="package"
               readonly
             />
-            <!-- </div> -->
-            <!-- </div> -->
             <div class="formfill_error_container">
               @if (errorMessage) {
               <div class="custom-error">{{ errorMessage }}</div>

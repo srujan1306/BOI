@@ -12,27 +12,62 @@
   align-items: center;
   padding: 28px 28px;
 }
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
 }
-
+.features_heading {
+  height: 30px;
+  h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+}
+th {
+  font-weight: 600;
+}
+.features {
+  text-align: left;
+}
+.package_headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 th,
 td {
   padding: 9px;
   text-align: center;
   border-bottom: 3px solid rgba(116, 110, 235, 0.2);
 }
-th {
-  font-weight: 600;
+thead tr:first-child th {
+  border-bottom: none;
 }
 
+tbody tr:last-child td,
+tbody tr:nth-last-child(2) td {
+  border-bottom: none;
+}
+td:nth-child(2),
+td:nth-child(3) {
+  border-right: 3px solid rgba(116, 110, 235, 0.2);
+}
+td:first-child {
+  font-size: 14px;
+  text-align: left;
+  width: 470px;
+}
+.features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+  text-align: left;
+}
+
+.features li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
 .plan {
   text-align: center;
   padding: 8px 16px;
@@ -43,26 +78,6 @@ th {
   font-weight: bold;
   width: 85px;
 }
-
-.plan-price {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.plan-features {
-  padding: 10px 0;
-}
-
-.plan-features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.plan-features li {
-  margin-bottom: 5px;
-}
-
 .check-mark {
   background-image: url("../../assets/check_mark.png");
   background-repeat: no-repeat;
@@ -71,74 +86,43 @@ th {
   width: 20px;
   height: 20px;
 }
-.features {
-  text-align: left;
-}
-.features_title {
-  text-align: left;
-  display: flex;
-}
-.features_heading {
-  height: 30px;
-  h1 {
-    font-size: 20px;
-    margin: 0;
-  }
-}
-.buttons {
-  display: flex;
-  flex-direction: row;
-}
-.package_headings {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 button {
   background: #99cc01;
   border: none;
-  width: 110px; /* Adjust as needed */
+  width: 110px;
   height: 36px;
   border-radius: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 button:hover {
   background: #291550;
   color: #99cc01;
-  border: 2px solid #99cc01; /* Darken background on hover */
+  border: 2px solid #99cc01;
   transform: scale(1.05);
 }
 
 button:active {
-  transform: scale(0.95); /* Slightly shrink the button when clicked */
-  background: #291550; /* Darker background on click */
+  transform: scale(0.95);
+  background: #291550;
 }
-.close_button,
-.close_button:hover,
-.close_button:active {
-  background: #9b0000;
-}
-
-/* Loader styles */
 .loader {
-  border: 3px solid rgba(255, 255, 255, 0.3); /* Light border */
-  border-top: 3px solid #fff; /* White top */
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   position: absolute;
-  left: calc(50% - 10px); /* Center horizontally */
-  top: calc(50% - 12px); /* Center vertically */
-  animation: spin 1s linear infinite; /* Spin animation */
+  left: calc(50% - 10px);
+  top: calc(50% - 12px);
+  animation: spin 1s linear infinite;
 }
-
-/* Spin animation */
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -148,11 +132,32 @@ button:active {
   }
 }
 
-//-----------------------
+.model_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.modal-container {
+  background-image: url("../../assets/popup_background.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 24px;
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: auto;
+  text-align: center;
+}
 .modal-content {
   width: 390px;
   height: auto;
-  // background-color: white;
   background: transparent;
   padding: 10px;
   padding-bottom: 30px;
@@ -181,98 +186,17 @@ button:active {
   justify-content: space-between;
   align-items: center;
 }
-.modal-container {
-  // background: white;
-  background-image: url("../../assets/popup_background.png");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  position: absolute; /* Use fixed positioning to center over the viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the modal */
-  // padding: 20px;
-  border-radius: 24px;
-  z-index: 100; /* Ensure it's above other content */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: auto; /* Set a fixed width for better appearance */
-  text-align: center; /* Center text */
-}
-
 .close {
   cursor: pointer;
   font-size: 28px;
   color: #aaa;
-  // padding-right: 12px;
-  // padding-bottom: 12px;
 }
-
 .close:hover {
   color: black;
 }
-
-/* Overlay for background dimming */
-.model_overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 99; /* Just below the modal */
-}
-
-/* Prevent background scrolling */
 body.modal-open {
   overflow: hidden;
 }
-
-.custom-error {
-  color: #f44336; /* Red color for error messages */
-  font-size: 0.7em; /* Smaller font size */
-  margin-top: 4px; /* Space above the error message */
-  width: max-content;
-}
-.formfill_error_container {
-  display: flex;
-  justify-content: center;
-  height: 20px;
-  width: 100%;
-}
-
-//-------------------
-
-thead tr:first-child th {
-  border-bottom: none;
-}
-
-/* Remove bottom border for the last row */
-tbody tr:last-child td,
-tbody tr:nth-last-child(2) td {
-  border-bottom: none;
-}
-/* Add right border for the 2nd and 3rd columns */
-td:nth-child(2),
-td:nth-child(3) {
-  border-right: 3px solid rgba(116, 110, 235, 0.2);
-}
-td:first-child {
-  font-size: 14px; /* Adjust this value as needed */
-  text-align: left; /* Align text to the left */
-  width: 470px; /* Set a specific width for the first column */
-}
-.features ul {
-  list-style-type: disc; /* Use bullet points */
-  padding-left: 20px; /* Indent the bullets */
-  margin: 0; /* Remove default margin */
-  text-align: left; /* Align text to the left */
-}
-
-.features li {
-  margin-bottom: 5px; /* Space between bullet points */
-  font-size: 14px; /* Adjust font size as needed */
-}
-
-//-------------------------
 .form-container {
   padding: 18px 16px;
   width: 290px;
@@ -282,33 +206,18 @@ td:first-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // margin: 20px 0px;
 }
-.validation_container {
-  height: 20px;
+.form_field {
   width: 100%;
 }
-.form_field_name,
-.form_field_state,
-.form_field_email,
-.form_field_company,
-.form_phone_field,
-.form_field_package {
+.form_fields {
   font-family: "Inter", sans-serif;
-
   background-color: transparent;
   border: 2px solid #6833cc;
   border-radius: 10px;
   width: 92%;
   padding: 14px 10px;
   color: #ffffff;
-}
-.name_field,
-.phone_field,
-.state_field,
-.email_field,
-.company_field {
-  width: 100%;
 }
 .form-field,
 ::placeholder,
@@ -331,6 +240,29 @@ td:first-child {
   font-family: "Inter", sans-serif;
   color: #000000;
 }
+.form-select:focus,
+input:focus {
+  border-color: #66afe9;
+  outline: none;
+}
+
+.custom-error {
+  color: #f44336;
+  font-size: 0.7em;
+  margin-top: 4px;
+  width: max-content;
+}
+.validation_container {
+  height: 20px;
+  width: 100%;
+}
+.formfill_error_container {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 100%;
+}
+
 button {
   background: #99cc01;
   border: none;
@@ -373,24 +305,6 @@ button:active {
     transform: rotate(360deg);
   }
 }
-.tagline {
-  margin-top: 10px;
-  text-align: center;
-  font-size: 12px;
-  color: #dcdde1;
-}
-.custom-error {
-  color: #f44336;
-  font-size: 0.7em;
-  margin-top: 4px;
-  width: max-content;
-}
-.formfill_error_container {
-  display: flex;
-  justify-content: center;
-  height: 20px;
-  width: 184px;
-}
 .submission_success {
   p {
     font-size: 14px;
@@ -399,96 +313,12 @@ button:active {
     color: #ffffff;
   }
 }
-.form-select:focus,
-input:focus {
-  border-color: #66afe9;
-  outline: none;
+.tagline {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #dcdde1;
 }
-
-// .input_phone_group {
-//   display: flex;
-//   flex-direction: column;
-// }
-// .input_name_group {
-//   display: flex;
-//   flex-direction: column;
-//   width: 107%;
-// }
-
-// .phone_field {
-//   width: 175px;
-// }
-// .input_state_group {
-//   display: flex;
-//   flex-direction: column;
-// }
-// .input_email_group {
-//   display: flex;
-//   flex-direction: column;
-//   // width: 107%;
-// }
-// .input_company_group {
-//   display: flex;
-//   flex-direction: column;
-//   width: 107%;
-// }
-// .input-group .form-field,
-// .input-group .form-select {
-//   flex: 1;
-//   margin-right: 10px;
-// }
-
-// .input-group .form-select {
-//   margin-right: 0;
-// }
-
-// .form-group {
-//   padding: 14px;
-//   border: 1px solid white;
-//   border-radius: 12px;
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: space-between;
-//   margin-bottom: 15px;
-// }
-
-// label {
-//   color: black;
-//   margin-bottom: 5px;
-// }
-
-// input {
-//   background: transparent;
-//   width: 92%;
-//   padding: 10px;
-//   border: 1px solid #4b2e99;
-//   border-radius: 8px;
-//   // color: #000;
-// }
-
-// .submit_button {
-//   padding: 10px 15px;
-//   background-color: #99cc01;
-//   border: none;
-//   color: white;
-//   border-radius: 5px;
-//   cursor: pointer;
-// }
-
-// .submit_button:disabled {
-//   background-color: #99cc01;
-// }
-
-// .form-select {
-//   background-color: white;
-//   border: 2px solid #ffffff;
-//   border-radius: 10px;
-//   width: 70%;
-//   padding: 10px;
-//   color: #000000; /* Default text color */
-//   cursor: pointer;
-// }
 @media (max-width: 1024px) {
   .container {
     padding: 20px;
@@ -496,10 +326,10 @@ input:focus {
   }
 
   button {
-    width: 70%; /* Full width for buttons on small screens */
+    width: 70%;
   }
 
   .modal-content {
-    width: 95%; /* Make modal content responsive */
+    width: 95%;
   }
 }
