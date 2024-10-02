@@ -56,10 +56,6 @@ export class Frame6Component implements OnInit {
 
   private checkScreenSize() {
     this.isMobile = window.innerWidth < 480;
-    if (this.isMobile) {
-      // Your code for mobile screens here
-      console.log('Screen size is less than 480px');
-    }
   }
 
   isDropdown_gold: boolean = false;

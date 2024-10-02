@@ -143,71 +143,8 @@
           <h1>Flexible for You.</h1>
           <span class="close" (click)="closeModal()">&times;</span>
         </div>
-        <!-- <form
-          [formGroup]="newCustomerForm"
-          (ngSubmit)="newCustomer()"
-          class="form-container"
-        >
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input id="name" formControlName="fullname" />
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input id="phone" formControlName="phone_number" />
-          </div>
-
-          <div class="form-group">
-            <label for="state">State:</label>
-            <select id="state" class="form-select" formControlName="state">
-              <option value="" disabled selected>State</option>
-              @for(state of usaStates; track $index) {
-              <option [value]="state">{{ state }}</option>
-              }
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input id="email" formControlName="email" />
-          </div>
-
-          <div class="form-group">
-            <label for="company">Company:</label>
-            <input id="company" formControlName="company" />
-          </div>
-          <div class="form-group">
-            <label for="package">Package:</label>
-            <input
-              id="package"
-              formControlName="package"
-              [value]="package"
-              readonly
-            />
-          </div>
-          <div class="formfill_error_container">
-            @if (errorMessage) {
-            <div class="custom-error">{{ errorMessage }}</div>
-            }
-          </div>
-
-          <button [disabled]="isLoading" class="submit_button" type="submit">
-            @if(!isLoading){
-            <span class="button-text">Submit</span>
-            } @if (isLoading) {
-            <span class="loader"></span>
-            }
-          </button>
-          @if(showSuccess) {
-          <div class="submission_success">
-            <p>Your details are submitted successfully!</p>
-          </div>
-          }
-        </form> -->
         <form [formGroup]="newCustomerForm" (ngSubmit)="newCustomer()">
           <div class="form-container">
-            <!-- <div class="input_name_group"> -->
             <div class="name_field">
               <input
                 type="text"
@@ -225,9 +162,6 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-
-            <!-- <div class="input_phone_group"> -->
             <div class="phone_field">
               <input
                 type="text"
@@ -248,8 +182,6 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-            <!-- <div class="input_state_group"> -->
             <div class="state_field">
               <select class="form-select" formControlName="state" title="State">
                 <option value="" disabled selected>State</option>
@@ -265,9 +197,6 @@
               </div>
               }}
             </div>
-            <!-- </div> -->
-
-            <!-- <div class="input_email_group"> -->
             <div class="email_field">
               <input
                 type="email"
@@ -287,8 +216,6 @@
               </div>
               } }
             </div>
-            <!-- </div> -->
-            <!-- <div class="input_company_group"> -->
             <div class="company_field">
               <input
                 type="text"
@@ -304,7 +231,6 @@
               </div>
               }}
             </div>
-            <!-- <div class="form-group"> -->
             <input
               id="package"
               class="form_field_package"
@@ -312,8 +238,6 @@
               [value]="package"
               readonly
             />
-            <!-- </div> -->
-            <!-- </div> -->
             <div class="formfill_error_container">
               @if (errorMessage) {
               <div class="custom-error">{{ errorMessage }}</div>
