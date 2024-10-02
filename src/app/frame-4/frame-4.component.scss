@@ -229,6 +229,10 @@ button:active {
 body.modal-open {
   overflow: hidden;
 }
+input:focus {
+  border-color: #66afe9;
+  outline: none;
+}
 @media (max-width: 768px) {
   .frame_4 {
     flex-direction: column;
