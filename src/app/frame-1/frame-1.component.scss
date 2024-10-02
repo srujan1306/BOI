@@ -1,7 +1,7 @@
 .frame_1 {
   background-image: url("../../assets/background_1.jpg");
   background-repeat: no-repeat;
-  background-size: cover; /* Maintain aspect ratio */
+  background-size: cover;
   margin: 0;
   height: auto;
   padding: 0;
@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .main_title {
   height: auto;
   display: flex;
@@ -18,7 +17,7 @@
   align-items: center;
   justify-content: center;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Added text shadow */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   padding: 2rem;
   padding-bottom: 2rem;
   h1 {
@@ -29,17 +28,15 @@
 .title_description {
   color: #c9c9c9;
   max-width: 600px;
-  width: 100%; // Responsive width
+  width: 100%;
   text-align: center;
 }
 
 .animation_1 {
-  max-width: 70%; // Full width for responsiveness
-  height: auto; // Maintain aspect ratio
+  max-width: 70%;
+  height: auto;
   padding-bottom: 6rem;
 }
-
-/* Media queries for responsiveness */
 @media (max-width: 1200px) {
   .title_description {
     width: 70%;
@@ -47,40 +44,38 @@
   }
 
   .animation_1 {
-    width: 75%; /* Make animation responsive */
+    width: 75%;
   }
 }
-
 @media (max-width: 768px) {
   .main_title {
-    padding: 10px; /* Less padding on very small screens */
+    padding: 10px;
     h1 {
       text-align: center;
       font-size: 24px;
     }
   }
   .title_description {
-    width: 90%; /* Full width on small screens */
+    width: 90%;
     text-wrap: balance;
     font-size: 14px;
   }
 
   .animation_1 {
-    width: 100%; /* Full width for animation */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
   }
 }
 
 @media (max-width: 480px) {
   .main_title {
-    padding: 10px; /* Less padding on very small screens */
+    padding: 10px;
     h1 {
       font-size: 20px;
       text-align: center;
     }
   }
-
   .title_description {
-    font-size: 12px; /* Smaller font size for readability */
+    font-size: 12px;
   }
 }

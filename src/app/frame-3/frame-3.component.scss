@@ -1,19 +1,16 @@
 .frame_3 {
-  // background-image: url("../../assets/background_3.png");
   background-image: url("../../assets/background_3_new.png");
   background-repeat: no-repeat;
-  background-size: cover; /* Changed to cover for better responsiveness */
-  height: auto; /* Change to auto for responsiveness */
+  background-size: cover;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
 .heading {
-  font-family: Inter;
   font-size: 28px;
   font-weight: 700;
   line-height: 50px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,20 +34,6 @@
   display: flex;
   flex-direction: column;
 }
-.right_column_boxes {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-}
-
-.box {
-  height: 100%; /* Change to auto to let boxes adjust */
-  width: 100%; /* Full width for responsiveness */
-  max-width: 350px; /* Set maximum width */
-  border-radius: 24px;
-  margin: 15px;
-}
-
 .left_box_container_1 {
   display: flex;
   flex-direction: column;
@@ -58,15 +41,6 @@
   background: #28245b;
   color: white;
   padding-left: 24px;
-}
-.animation_3,
-.animation_4,
-.animation_5,
-.animation_6,
-.animation_7 {
-  height: 100px;
-  width: 100px;
-  margin-left: 230px;
 }
 .left_box_container_2 {
   display: flex;
@@ -90,6 +64,11 @@
     margin-top: 22px;
   }
 }
+.right_column_boxes {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
 .right_box_container_1 {
   display: flex;
   flex-direction: column;
@@ -106,59 +85,73 @@
   color: #28245b;
   padding-left: 24px;
 }
-.book_call_container {
-  margin: 28px;
-
-  p {
-    width: 124px;
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    margin-top: 8px;
-  }
+.box {
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 24px;
+  margin: 15px;
 }
 
+.animation_3,
+.animation_4,
+.animation_5,
+.animation_6,
+.animation_7 {
+  height: 100px;
+  width: 100px;
+  margin-left: 230px;
+}
+.book_call_container {
+  margin: 28px;
+}
 .button {
   background: #99cc01;
   border: none;
-  width: 110px; /* Adjust as needed */
+  width: 110px;
   height: 36px;
   border-radius: 12px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   position: relative;
   overflow: hidden;
-  transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
 .button:hover {
   background: #291550;
   color: #99cc01;
-  border: 2px solid #99cc01; /* Darken background on hover */
+  border: 2px solid #99cc01;
   transform: scale(1.05);
 }
 
 .button:active {
-  transform: scale(0.95); /* Slightly shrink the button when clicked */
-  background: #291550; /* Even darker green when clicked */
+  transform: scale(0.95);
+  background: #291550;
 }
-
+.discount p {
+  width: 124px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-top: 8px;
+}
 @media (max-width: 768px) {
   .box {
-    width: 90%; /* Take up more width on smaller screens */
+    width: 90%;
   }
 
   .frame_3_container {
-    flex-direction: column; /* Stack columns on smaller screens */
-    align-items: center; /* Center align items */
+    flex-direction: column;
+    align-items: center;
     padding-bottom: 0px;
   }
 
   .right_column_boxes {
-    margin-top: 0px; /* Adjust margin */
+    margin-top: 0px;
     align-items: center;
   }
 
@@ -167,18 +160,18 @@
   .animation_5,
   .animation_6,
   .animation_7 {
-    margin-left: 0; /* Reset margin on smaller screens */
-    margin-top: 10px; /* Add vertical spacing */
+    margin-left: 0;
+    margin-top: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .frame_3 {
-    min-height: 100vh; /* Reduce minimum height for very small screens */
+    min-height: 100vh;
   }
   .box {
-    height: 100%; /* Change to auto to let boxes adjust */
-    width: 100%; /* Full width for responsiveness */
+    height: 100%;
+    width: 100%;
   }
 
   .left_box_container_1,
@@ -203,7 +196,7 @@
     }
   }
   .book_call_container {
-    margin: 10px; /* Reduce margin */
+    margin: 10px;
   }
   .right_column_boxes {
     margin-top: 0px;
