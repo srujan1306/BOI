@@ -18,7 +18,7 @@
     <form [formGroup]="CustomerForm" (ngSubmit)="newCustomer()">
       <div class="form-container">
         <div class="input_name_group">
-          <div class="name_field">
+          <div>
             <input
               type="text"
               placeholder="Full Name"
@@ -134,7 +134,7 @@
     <div class="modal-container">
       <div class="modal-content">
         <p>Your details have been submitted successfully!</p>
-        <button class="button" (click)="closeModal()">OK</button>
+        <button (click)="closeModal()">OK</button>
       </div>
     </div>
   </div>
