@@ -80,6 +80,7 @@
   flex-direction: column;
   width: 107%;
 }
+.form-select:focus,
 input:focus {
   border-color: #66afe9;
   outline: none;
