@@ -92,9 +92,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
+  width: 40%;
+  margin-top: 40px;
   .proc_footer {
-    width: 80%;
+    width: 100%;
     height: auto;
   }
 }
@@ -157,10 +158,10 @@
   }
   .proc {
     margin-top: 28px;
-    width: 100%;
+    width: 75%;
     height: auto;
-    overflow: visible;
     img {
+      padding: 20px;
       height: 100%;
       width: 100%;
     }
